@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core palette — warm white */
+  --void: #faf8f5;
+  --surface: #f0ede8;
+  --raised: #e6e2db;
+  --paper: #0f0e0d;
+  --muted: #5e574f;
+  --border: #d8d3cb;
+  --border-light: #e4e0d8;
+
+  /* Accents */
+  --flame: #e8541a;
+  --flame-dim: rgba(232, 84, 26, 0.08);
+  --gold: #a87c2a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-void: var(--void);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-paper: var(--paper);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+  --color-flame: var(--flame);
+  --color-flame-dim: var(--flame-dim);
+  --color-gold: var(--gold);
+  --font-sans: var(--font-geist);
+  --font-display: var(--font-syne);
+  --font-serif: var(--font-cormorant);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+* { box-sizing: border-box; }
+
+html { background: var(--void); }
+
+
+body {
+  background: var(--void);
+  color: var(--paper);
+  font-family: var(--font-geist), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Film grain — desktop only, adds cinematic depth ── */
+@media (pointer: fine) {
+  body::after {
+    content: "";
+    position: fixed;
+    inset: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.028;
+    pointer-events: none;
+    z-index: 9998;
+    animation: grain 0.4s steps(1) infinite;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10%       { transform: translate(-2%, -3%); }
+  20%       { transform: translate(3%, 1%); }
+  30%       { transform: translate(-1%, 3%); }
+  40%       { transform: translate(2%, -2%); }
+  50%       { transform: translate(-3%, 1%); }
+  60%       { transform: translate(1%, 2%); }
+  70%       { transform: translate(-2%, -1%); }
+  80%       { transform: translate(3%, 3%); }
+  90%       { transform: translate(-1%, -2%); }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--flame); }
+
+/* ── Marquee ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.3333%); }
+}
+.marquee-inner {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee 28s linear infinite;
+}
+
+/* ── Display font tight tracking ── */
+.font-display { letter-spacing: -0.02em; }
+
+/* ── Legibility: boost small tracking labels ── */
+.text-xs { font-size: 0.8125rem; }   /* 13px instead of 12px */
+.text-sm { font-size: 0.9375rem; }   /* 15px instead of 14px */
+
+/* ── Cursor — desktop only ── */
+@media (pointer: fine) {
+  * { cursor: none; }
+  a, button, [role="button"] { cursor: none; }
 }
