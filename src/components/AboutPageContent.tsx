@@ -128,14 +128,7 @@ export function AboutPageContent() {
 
       {/* ── HERO ── */}
       <div className="max-w-7xl mx-auto px-6 md:px-10 pt-32 md:pt-44 pb-16">
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="text-xs tracking-[0.22em] uppercase text-muted mb-8"
-        >
-          About Symm Studios
-        </motion.p>
+
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -221,7 +214,8 @@ export function AboutPageContent() {
           <ParallaxWord text="Brand Identity —" offset={[-60, 60]} />
           <ParallaxWord text="Web Development —" offset={[60, -60]} />
           <ParallaxWord text="UI / UX Design —" offset={[-40, 40]} />
-          <ParallaxWord text="Creative Direction —" offset={[40, -40]} />
+          <ParallaxWord text="Agentic Automation —" offset={[-60, 60]} />
+          <ParallaxWord text="SEO & Metadata —" offset={[60, -60]} />
         </div>
       </div>
 

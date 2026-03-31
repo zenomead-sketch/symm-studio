@@ -40,7 +40,7 @@ export function WorkPageContent() {
     <div className="min-h-screen" style={{ background: "#faf8f5" }}>
       <div className="max-w-7xl mx-auto px-6 md:px-10 pt-32 md:pt-44 pb-20">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16,1,0.3,1] }}>
-          <p className="text-[11px] tracking-[0.22em] uppercase text-muted mb-6">Selected Work</p>
+
           <h1
             className="font-display font-bold text-paper leading-[0.92]"
             style={{ fontSize: "clamp(3rem, 8vw, 7rem)" }}
@@ -95,7 +95,7 @@ function ProjectCard({ p }: { p: Project }) {
         <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom, transparent 40%, ${p.accent}30)` }} />
         <div className="absolute top-4 left-4 flex flex-wrap gap-1.5">
           {p.tags.map((t) => (
-            <span key={t} className="text-[9px] tracking-widest uppercase px-2 py-1 border backdrop-blur-sm" style={{ borderColor: `${p.accent}60`, color: `${p.accent}ee`, background: "rgba(2,4,11,0.6)" }}>{t}</span>
+            <span key={t} className="text-[9px] tracking-widest uppercase px-2 py-1 border backdrop-blur-sm" style={{ borderColor: `${p.accent}60`, color: `${p.accent}ee`, background: "rgba(28,26,23,0.6)" }}>{t}</span>
           ))}
         </div>
       </div>

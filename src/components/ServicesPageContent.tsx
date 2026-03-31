@@ -189,11 +189,11 @@ const services = [
   },
 ];
 
-const process = [
-  { n: "01", title: "Discovery", desc: "We dig into your business, market, competitors, and goals. No assumptions, no templates — just real understanding." },
-  { n: "02", title: "Strategy", desc: "We map out a clear plan before a single pixel is designed or line of code is written. Scope, timeline, and deliverables locked." },
-  { n: "03", title: "Execution", desc: "We build fast and iterate with you. Regular check-ins, live previews, and zero-surprise project management." },
-  { n: "04", title: "Launch & Support", desc: "We don't disappear at launch. Every project includes post-delivery support so you're never left holding the bag." },
+const guarantees = [
+  { n: "01", title: "No templates. Ever.", desc: "Every project is built from scratch for your business. You won't find your website on a theme marketplace." },
+  { n: "02", title: "Everything in-house.", desc: "No subcontractors, no handoffs, no diluted quality. The team you talk to is the team that builds." },
+  { n: "03", title: "Fixed scope. Fixed price.", desc: "We lock deliverables and price before a line of code is written. No surprise invoices at the finish line." },
+  { n: "04", title: "You own it all.", desc: "Full code ownership, no vendor lock-in. Everything we build is yours — clean, documented, and ready to hand off." },
 ];
 
 function ServiceRow({ s, i }: { s: typeof services[0]; i: number }) {
@@ -256,10 +256,6 @@ function ServiceRow({ s, i }: { s: typeof services[0]; i: number }) {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-6 pt-6 border-t border-border flex items-center gap-2">
-                    <span className="text-[10px] tracking-[0.2em] uppercase text-muted/50">Typical timeline</span>
-                    <span className="text-xs text-paper font-mono">{s.timeline}</span>
-                  </div>
                 </div>
 
                 {/* Why */}
@@ -278,10 +274,10 @@ function ServiceRow({ s, i }: { s: typeof services[0]; i: number }) {
 
               <div className="mt-8">
                 <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase text-paper/60 hover:text-flame transition-colors"
+                  href="/pricing"
+                  className="inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase text-flame/60 hover:text-flame transition-colors"
                 >
-                  Get a quote for this service
+                  See pricing
                   <ArrowRight size={12} />
                 </Link>
               </div>
@@ -300,7 +296,7 @@ export function ServicesPageContent() {
       {/* ── HERO ── */}
       <div className="max-w-7xl mx-auto px-6 md:px-10 pt-32 md:pt-44 pb-16">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}>
-          <p className="text-xs tracking-[0.22em] uppercase text-muted mb-6">What We Do</p>
+
           <h1
             className="font-display font-bold text-paper leading-[0.92]"
             style={{ fontSize: "clamp(3rem, 8vw, 7rem)", letterSpacing: "-0.04em" }}
@@ -363,8 +359,8 @@ export function ServicesPageContent() {
         </div>
       </div>
 
-      {/* ── PROCESS ── */}
-      <div className="border-t border-border" style={{ background: "#111" }}>
+      {/* ── GUARANTEES ── */}
+      <div className="border-t border-border" style={{ background: "#1c1a17" }}>
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -373,33 +369,33 @@ export function ServicesPageContent() {
             transition={{ duration: 0.6 }}
             className="mb-16"
           >
-            <p className="text-xs tracking-[0.22em] uppercase text-muted mb-4">How it works</p>
+            <p className="text-xs tracking-[0.22em] uppercase text-flame mb-4">Our standards</p>
             <h2
-              className="font-display font-bold text-paper leading-tight"
+              className="font-display font-bold text-void leading-tight"
               style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", letterSpacing: "-0.025em" }}
             >
-              Our process, every time.
+              What every project includes.
             </h2>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-px bg-border border border-border">
-            {process.map((step, i) => (
+            {guarantees.map((item, i) => (
               <motion.div
-                key={step.n}
+                key={item.n}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="bg-void p-8 md:p-10"
               >
-                <span className="text-[10px] tracking-widest text-muted/30 font-mono block mb-6">{step.n}</span>
+                <span className="font-display font-bold text-flame/20 block mb-4 leading-none" style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", letterSpacing: "-0.04em" }}>{item.n}</span>
                 <h3
                   className="font-display font-bold text-paper mb-3 leading-tight"
                   style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.3rem)", letterSpacing: "-0.02em" }}
                 >
-                  {step.title}
+                  {item.title}
                 </h3>
-                <p className="text-muted text-sm leading-relaxed">{step.desc}</p>
+                <p className="text-muted text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>

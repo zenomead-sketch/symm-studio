@@ -8,6 +8,7 @@ const items = [
   "App Development",
   "SEO & Content",
   "Virtual Agents",
+  "SEO & Content",
   "Copywriting",
 ];
 

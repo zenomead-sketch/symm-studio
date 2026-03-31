@@ -35,7 +35,7 @@ export function ContactPageContent() {
     <div className="min-h-screen" style={{ background: "#faf8f5" }}>
       <div className="max-w-7xl mx-auto px-6 md:px-10 pt-32 md:pt-44 pb-20">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.16,1,0.3,1] }}>
-          <p className="text-xs tracking-[0.22em] uppercase text-muted mb-6">Contact</p>
+
           <h1
             className="font-display font-bold text-paper leading-[0.92]"
             style={{ fontSize: "clamp(3rem, 8vw, 7rem)" }}

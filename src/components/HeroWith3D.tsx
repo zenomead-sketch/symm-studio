@@ -92,15 +92,6 @@ export function HeroWith3D() {
         {/* Content */}
         <div className="relative z-10 flex flex-col justify-end min-h-screen max-w-7xl mx-auto px-6 md:px-10 pb-20 md:pb-28 pt-24 w-full">
 
-          {/* Eyebrow */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={loaded ? { opacity: 1 } : {}}
-            transition={{ duration: 1, delay: 0.1 }}
-            className="text-xs tracking-[0.32em] uppercase text-paper/65 mb-10 font-medium"
-          >
-            Creative Studio — Est. 2021
-          </motion.p>
 
           {/* Headline */}
           <div

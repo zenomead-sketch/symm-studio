@@ -41,7 +41,7 @@ export function Footer() {
           <div>
             <p className="text-xs tracking-[0.25em] uppercase text-muted/50 mb-4">Navigate</p>
             <ul className="space-y-2.5 text-sm">
-              {[["Work", "/work"], ["Services", "/services"], ["About", "/about"], ["Contact", "/contact"]].map(([l, h]) => (
+              {[["Work", "/work"], ["Services", "/services"], ["Pricing", "/pricing"], ["About", "/about"], ["Contact", "/contact"]].map(([l, h]) => (
                 <li key={h}>
                   <Link href={h} className="text-muted hover:text-paper transition-colors">{l}</Link>
                 </li>

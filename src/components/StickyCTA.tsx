@@ -39,7 +39,7 @@ export function StickyCTA() {
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] }}
           className="fixed bottom-0 left-0 right-0 z-50 border-t border-border"
-          style={{ background: "rgba(5,5,5,0.92)", backdropFilter: "blur(16px)" }}
+          style={{ background: "rgba(28,26,23,0.92)", backdropFilter: "blur(16px)" }}
         >
           <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between gap-6">
             <p className="text-paper/50 text-sm hidden sm:block">
