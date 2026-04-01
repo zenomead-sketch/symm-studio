@@ -38,30 +38,30 @@ export function Cursor() {
       {/* Dot */}
       <motion.div
         className="fixed top-0 left-0 z-[9998] pointer-events-none mix-blend-difference"
-        animate={{ x: pos.x - 4, y: pos.y - 4 }}
+        animate={{ x: pos.x - 6, y: pos.y - 6 }}
         transition={{ type: "spring", stiffness: 800, damping: 60, mass: 0.2 }}
       >
-        <div className="w-2 h-2 rounded-full bg-paper" />
+        <div className="w-3 h-3 rounded-full bg-white" />
       </motion.div>
 
       {/* Ring */}
       <motion.div
         className="fixed top-0 left-0 z-[9997] pointer-events-none"
         animate={{
-          x: pos.x - (hovered ? 28 : 16),
-          y: pos.y - (hovered ? 28 : 16),
+          x: pos.x - (hovered ? 32 : 20),
+          y: pos.y - (hovered ? 32 : 20),
           scale: hovered ? 1 : 1,
         }}
         transition={{ type: "spring", stiffness: 200, damping: 30, mass: 0.5 }}
       >
         <motion.div
           animate={{
-            width: hovered ? 56 : 32,
-            height: hovered ? 56 : 32,
-            borderColor: hovered ? "var(--flame)" : "rgba(242,237,232,0.3)",
+            width: hovered ? 64 : 40,
+            height: hovered ? 64 : 40,
+            borderColor: hovered ? "var(--flame)" : "rgba(255,255,255,0.85)",
           }}
           transition={{ duration: 0.2 }}
-          className="rounded-full border flex items-center justify-center overflow-hidden"
+          className="rounded-full border-2 flex items-center justify-center overflow-hidden"
         >
           {label && (
             <span className="text-[8px] tracking-widest uppercase text-paper font-medium whitespace-nowrap px-1">

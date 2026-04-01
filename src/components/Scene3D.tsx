@@ -146,7 +146,7 @@ function CameraParallax() {
 export function Scene3D() {
   return (
     // Shift entire scene right so 3D sits in the right half
-    <group position={[3.2, 0, 0]}>
+    <group position={[5.7, 0, 0]}>
       {/* Warm soft fill — no harsh blacks */}
       <ambientLight intensity={1.4} color={WARM} />
 

@@ -62,7 +62,6 @@ export default function RootLayout({
         style={{ background: "#faf8f5" }}
       >
         <SmoothScroll>
-          <Cursor />
           <Navbar />
           <main className="flex-grow">{children}</main>
           <Footer />

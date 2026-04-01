@@ -1,79 +1,122 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 const services = [
-  { n: "01", title: "Brand Identity", desc: "Logos, systems, and visual language that make your business unforgettable.", icon: "/icon-brand-identity.png" },
-  { n: "02", title: "Web Development", desc: "Custom Next.js/React sites engineered for speed, accessibility, and conversion.", icon: "/icon-web-development.png" },
-  { n: "03", title: "UI/UX Design", desc: "Interfaces that feel effortless — from wireframe to pixel-perfect delivery.", icon: "/icon-uiux-design.png" },
-  { n: "04", title: "Creative Direction", desc: "A clear visual language across every touchpoint, digital and physical.", icon: "/icon-creative-direction.png" },
-  { n: "05", title: "App Development", desc: "Full-stack web and mobile applications built on modern stacks.", icon: "/icon-app-development.png" },
-  { n: "06", title: "SEO & Content", desc: "Strategy and copy that rank, resonate, and convert.", icon: "/icon-seo-content.png" },
+  { n: "01", title: "Brand Identity",      desc: "Logos, systems, and visual language that make your business unforgettable." },
+  { n: "02", title: "Web Development",     desc: "Custom Next.js/React sites engineered for speed, accessibility, and conversion." },
+  { n: "03", title: "UI/UX Design",        desc: "Interfaces that feel effortless — from wireframe to pixel-perfect delivery." },
+  { n: "04", title: "Creative Direction",  desc: "A clear visual language across every touchpoint, digital and physical." },
+  { n: "05", title: "App Development",     desc: "Full-stack web and mobile applications built on modern stacks." },
+  { n: "06", title: "SEO & Content",       desc: "Strategy and copy that rank, resonate, and convert." },
 ];
 
 export function Services() {
+  const [active, setActive] = useState<number | null>(null);
+
   return (
-    <section className="border-t py-24 md:py-36" style={{ background: "#faf8f5", borderColor: "rgba(15,14,13,0.05)" }}>
+    <section style={{ background: "#0f0e0d" }} className="py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
+
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-0">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-14 md:mb-20">
           <div>
-            <p className="text-xs tracking-[0.2em] uppercase text-muted mb-4">
-              What We Do
-            </p>
+            <p className="text-xs tracking-[0.25em] uppercase text-flame mb-4">What We Do</p>
             <h2
-              className="font-display font-bold text-paper leading-tight"
+              className="font-display font-bold text-white leading-tight"
               style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
             >
-              Services built for growth
+              Services built<br className="hidden md:block" /> for growth
             </h2>
           </div>
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-xs tracking-[0.18em] uppercase text-muted hover:text-paper transition-colors flex-shrink-0"
+            className="inline-flex items-center gap-2 text-xs tracking-[0.18em] uppercase text-white/30 hover:text-flame transition-colors flex-shrink-0"
           >
             All Services <ArrowUpRight size={13} />
           </Link>
         </div>
 
-        {/* Numbered list */}
-        <div className="mt-12 divide-y divide-border">
+        {/* Service rows */}
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
           {services.map((s, i) => (
             <motion.div
               key={s.n}
-              initial={{ opacity: 0, y: 20 }}
+              onHoverStart={() => setActive(i)}
+              onHoverEnd={() => setActive(null)}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.5, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
-              className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-8 py-6 hover:bg-surface transition-colors px-3 -mx-3"
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.55, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
+              className="group relative flex items-center gap-6 py-7 md:py-9 cursor-default overflow-hidden"
+              style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}
             >
-              <span className="font-display text-xs tracking-widest text-muted/60 w-6 flex-shrink-0">
+              {/* Flame sweep on hover */}
+              <motion.div
+                className="absolute inset-0 pointer-events-none"
+                animate={{ opacity: active === i ? 1 : 0 }}
+                transition={{ duration: 0.4 }}
+                style={{
+                  background: "linear-gradient(90deg, rgba(232,84,26,0.1) 0%, rgba(232,84,26,0.03) 50%, transparent 100%)",
+                }}
+              />
+
+              {/* Left accent bar */}
+              <motion.div
+                className="absolute left-0 top-0 bottom-0 w-[3px] bg-flame origin-top"
+                animate={{ scaleY: active === i ? 1 : 0 }}
+                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              />
+
+              {/* Number */}
+              <span className="relative font-display text-[11px] tracking-widest text-white/20 flex-shrink-0 w-10 pl-3 select-none">
                 {s.n}
               </span>
-              <Image
-                src={s.icon}
-                alt={s.title}
-                width={36}
-                height={36}
-                className="flex-shrink-0 rounded opacity-80 group-hover:opacity-100 transition-opacity"
-              />
-              <h3
-                className="font-display font-bold text-paper group-hover:text-flame transition-colors leading-tight flex-shrink-0 md:w-56"
-                style={{ fontSize: "clamp(1.1rem, 2vw, 1.5rem)" }}
+
+              {/* Title */}
+              <motion.h3
+                className="relative font-display font-bold leading-none flex-1"
+                animate={{
+                  color: active === i ? "#e8541a" : "#faf8f5",
+                  x: active === i ? 6 : 0,
+                }}
+                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                style={{ fontSize: "clamp(1.6rem, 4vw, 3.5rem)" }}
               >
                 {s.title}
-              </h3>
-              <p className="text-muted text-sm leading-relaxed md:max-w-sm hidden sm:block">{s.desc}</p>
-              <ArrowUpRight
-                size={14}
-                className="hidden sm:block ml-auto text-muted opacity-0 group-hover:opacity-60 transition-opacity flex-shrink-0"
-              />
+              </motion.h3>
+
+              {/* Description — desktop only, fades in */}
+              <motion.p
+                className="relative text-white/35 text-sm leading-relaxed max-w-[260px] text-right flex-shrink-0 hidden lg:block"
+                animate={{
+                  opacity: active === i ? 1 : 0,
+                  x: active === i ? 0 : 12,
+                }}
+                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              >
+                {s.desc}
+              </motion.p>
+
+              {/* Arrow */}
+              <motion.div
+                className="relative flex-shrink-0"
+                animate={{
+                  opacity: active === i ? 1 : 0,
+                  rotate: active === i ? 0 : -30,
+                  x: active === i ? 0 : -8,
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                <ArrowUpRight size={22} className="text-flame" />
+              </motion.div>
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );

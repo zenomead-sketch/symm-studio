@@ -72,8 +72,3 @@ body {
 .text-xs { font-size: 0.8125rem; }   /* 13px instead of 12px */
 .text-sm { font-size: 0.9375rem; }   /* 15px instead of 14px */
 
-/* ── Cursor — desktop only ── */
-@media (pointer: fine) {
-  * { cursor: none; }
-  a, button, [role="button"] { cursor: none; }
-}
