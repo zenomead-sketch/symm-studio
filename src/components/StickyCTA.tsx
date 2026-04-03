@@ -41,16 +41,16 @@ export function StickyCTA() {
           className="fixed bottom-0 left-0 right-0 z-50 border-t border-border"
           style={{ background: "rgba(28,26,23,0.92)", backdropFilter: "blur(16px)" }}
         >
-          <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex items-center justify-between gap-6">
-            <p className="text-paper/50 text-sm hidden sm:block">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-3 sm:py-4 flex items-center justify-between gap-4">
+            <p className="text-void/50 text-sm hidden sm:block">
               Ready to grow your business?{" "}
-              <span className="text-paper/80">Let's talk.</span>
+              <span className="text-void/80">Let's talk.</span>
             </p>
-            <div className="flex items-center gap-3 ml-auto">
+            <div className="flex items-center gap-3 w-full sm:w-auto sm:ml-auto">
               <Link
                 href="/contact"
                 data-cursor="LET'S GO"
-                className="group inline-flex items-center gap-2 px-6 py-3 bg-flame text-void font-display font-bold text-[12px] tracking-[0.12em] uppercase hover:bg-paper transition-colors duration-300"
+                className="group inline-flex items-center gap-2 px-5 sm:px-6 py-3 bg-flame text-void font-display font-bold text-[12px] tracking-[0.12em] uppercase hover:bg-paper transition-colors duration-300 flex-1 sm:flex-none justify-center"
               >
                 Start a Project
                 <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
@@ -58,7 +58,7 @@ export function StickyCTA() {
               <button
                 onClick={() => setDismissed(true)}
                 aria-label="Dismiss"
-                className="p-2 text-muted hover:text-paper transition-colors"
+                className="p-2 text-void/40 hover:text-void transition-colors"
               >
                 <X size={16} />
               </button>

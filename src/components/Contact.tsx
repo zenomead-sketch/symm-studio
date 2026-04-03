@@ -40,9 +40,9 @@ export function Contact() {
             </Link>
             <a
               href="mailto:symmwebstudio@gmail.com"
-              className="inline-flex items-center gap-3 px-8 py-4 border border-void/20 text-void font-display font-semibold text-[13px] tracking-[0.12em] uppercase hover:border-void hover:bg-void/10 transition-colors"
+              className="inline-flex items-center gap-3 px-6 sm:px-8 py-4 border border-void/20 text-void font-display font-semibold text-[11px] sm:text-[13px] tracking-[0.1em] sm:tracking-[0.12em] uppercase hover:border-void hover:bg-void/10 transition-colors min-w-0 overflow-hidden"
             >
-              symmwebstudio@gmail.com
+              <span className="truncate">symmwebstudio@gmail.com</span>
             </a>
           </div>
         </motion.div>

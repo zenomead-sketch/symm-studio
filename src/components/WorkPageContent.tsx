@@ -4,36 +4,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { getAllProjects, type ProjectDetail } from "@/lib/projects";
 
-type Project = {
-  n: string; title: string; category: string; tags: string[];
-  desc: string; href: string; live: boolean; year: string;
-  accent: string; bg: string; img: string;
-};
-
-const projects: Project[] = [
-  {
-    n: "01", title: "Lien On Us Medical", category: "Healthcare Platform",
-    tags: ["Web App", "Analytics", "Healthcare"],
-    desc: "A medical referral platform featuring a provider dashboard with real-time analytics and case tracking — built to handle serious volume for Tampa Bay healthcare providers.",
-    href: "https://www.lienonusmedical.com/", live: true, year: "2024",
-    accent: "#2a6496", bg: "from-[#04101f] to-[#faf8f5]", img: "/portfolio-lien-on-us.png",
-  },
-  {
-    n: "02", title: "Ticket Snipes", category: "Automation Platform",
-    tags: ["Full Stack", "E-commerce", "Automation"],
-    desc: "High-throughput ticket acquisition system engineered for speed, with fully automated purchasing workflows and real-time inventory monitoring.",
-    href: "https://ticketsnipes.lovable.app/", live: true, year: "2024",
-    accent: "#7b5ea7", bg: "from-[#0f0620] to-[#faf8f5]", img: "/portfolio-ticket-snipes.png",
-  },
-  {
-    n: "03", title: "Cod Masters 8", category: "Community Platform",
-    tags: ["Discord Bot", "Community", "Full Stack"],
-    desc: "Full-stack gaming community platform integrated with a custom Discord bot for automated management, alerts, and live leaderboard tracking.",
-    href: "https://codmaster8s.com/", live: true, year: "2023",
-    accent: "#1a7a5e", bg: "from-[#03120d] to-[#faf8f5]", img: "/portfolio-cod-masters.png",
-  },
-];
+const projects = getAllProjects();
 
 export function WorkPageContent() {
   return (
@@ -61,13 +34,9 @@ export function WorkPageContent() {
               transition={{ duration: 0.6, delay: i * 0.12, ease: [0.16,1,0.3,1] }}
               className="bg-void"
             >
-              {p.live ? (
-                <a href={p.href} target="_blank" rel="noopener noreferrer" data-cursor="OPEN" className="group block">
-                  <ProjectCard p={p} />
-                </a>
-              ) : (
-                <div className="group"><ProjectCard p={p} /></div>
-              )}
+                  <Link href={`/work/${p.slug}`} data-cursor="VIEW" className="group block">
+                <ProjectCard p={p} />
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -87,11 +56,11 @@ export function WorkPageContent() {
   );
 }
 
-function ProjectCard({ p }: { p: Project }) {
+function ProjectCard({ p }: { p: ProjectDetail }) {
   return (
     <>
       <div className="relative h-52 overflow-hidden">
-        <Image src={p.img} alt={p.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+        <Image src={p.images[0].src} alt={p.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
         <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom, transparent 40%, ${p.accent}30)` }} />
         <div className="absolute top-4 left-4 flex flex-wrap gap-1.5">
           {p.tags.map((t) => (

@@ -74,10 +74,16 @@ export function HeroWith3D() {
           }}
         />
 
-        {/* Left-side text legibility fade */}
+        {/* Left-side text legibility fade — desktop */}
         <div
           className="absolute inset-y-0 left-0 w-[50%] z-[1] pointer-events-none hidden md:block"
           style={{ background: "linear-gradient(to right, rgba(250,248,245,0.72) 30%, transparent)" }}
+        />
+
+        {/* Mobile text legibility overlay — full-bleed, bottom-weighted */}
+        <div
+          className="absolute inset-0 z-[1] pointer-events-none md:hidden"
+          style={{ background: "linear-gradient(to bottom, rgba(250,248,245,0.55) 0%, rgba(250,248,245,0.25) 45%, rgba(250,248,245,0.7) 75%, rgba(250,248,245,0.95) 100%)" }}
         />
 
         {/* Bottom fade */}
@@ -162,14 +168,14 @@ export function HeroWith3D() {
             initial={{ opacity: 0 }}
             animate={loaded ? { opacity: 1 } : {}}
             transition={{ duration: 1.2, delay: 1.6 }}
-            className="mt-14 pt-5 border-t border-paper/[0.07] flex items-center gap-5"
+            className="mt-14 pt-5 border-t border-paper/[0.07] flex items-center gap-5 overflow-hidden"
           >
             <span className="text-xs tracking-[0.25em] uppercase text-paper/50 flex-shrink-0">
               Work
             </span>
-            <div className="flex items-center gap-7">
-              {["Lien On Us Medical", "Ticket Snipes", "Cod Masters 8"].map((c) => (
-                <span key={c} className="text-xs text-paper/45 whitespace-nowrap font-medium">
+            <div className="flex items-center gap-5 sm:gap-7 min-w-0">
+              {["Lien On Us Medical", "Ticket Snipes", "Cod Master 8s"].map((c, i) => (
+                <span key={c} className={`text-xs text-paper/45 whitespace-nowrap font-medium ${i > 0 ? "hidden sm:inline" : ""}`}>
                   {c}
                 </span>
               ))}

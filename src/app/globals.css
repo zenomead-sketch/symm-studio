@@ -58,11 +58,22 @@ body {
   from { transform: translateX(0); }
   to   { transform: translateX(-33.3333%); }
 }
+
+/* ── Gallery scroll ── */
+@keyframes gallery-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
 .marquee-inner {
   display: flex;
   width: max-content;
   will-change: transform;
   animation: marquee 28s linear infinite;
+}
+
+/* ── Ark UI Carousel ── */
+[data-part="indicator"][data-current] {
+  border-color: #1c1a17 !important;
 }
 
 /* ── Display font tight tracking ── */
@@ -71,4 +82,8 @@ body {
 /* ── Legibility: boost small tracking labels ── */
 .text-xs { font-size: 0.8125rem; }   /* 13px instead of 12px */
 .text-sm { font-size: 0.9375rem; }   /* 15px instead of 14px */
+
+/* ── About marquee duration (responsive via CSS var) ── */
+:root { --about-marquee-dur: 20s; }
+@media (max-width: 767px) { :root { --about-marquee-dur: 7s; } }
 

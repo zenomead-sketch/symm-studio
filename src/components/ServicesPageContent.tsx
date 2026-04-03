@@ -240,7 +240,7 @@ function ServiceRow({ s, i }: { s: typeof services[0]; i: number }) {
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden"
           >
-            <div className="pb-10 px-3 -mx-3 pl-[calc(1.5rem+2.5rem)] sm:pl-[calc(1.5rem+4rem)]">
+            <div className="pb-10 px-3 -mx-3 pl-4 sm:pl-[calc(1.5rem+2.5rem)] md:pl-[calc(1.5rem+4rem)]">
               {/* Mobile desc */}
               <p className="text-muted text-sm leading-relaxed mb-8 md:hidden">{s.desc}</p>
 
@@ -314,7 +314,7 @@ export function ServicesPageContent() {
         transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         className="max-w-7xl mx-auto px-6 md:px-10 pb-16"
       >
-        <div className="relative w-full overflow-hidden" style={{ aspectRatio: "21/8" }}>
+        <div className="relative w-full overflow-hidden aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/8]">
           <Image
             src="/services-hero.png"
             alt="Symm Studios — full-service creative studio"
@@ -326,8 +326,8 @@ export function ServicesPageContent() {
       </motion.div>
 
       {/* ── INTRO ── */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-20">
-        <div className="grid md:grid-cols-[1fr_1.4fr] gap-12 md:gap-24 items-start">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pb-16 md:pb-20">
+        <div className="grid md:grid-cols-[1fr_1.4fr] gap-8 md:gap-24 items-start">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}

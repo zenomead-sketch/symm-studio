@@ -24,7 +24,7 @@ const testimonials = [
     quote:
       "The attention to detail is extraordinary. Every micro-interaction, every piece of copy — it felt like they cared as much about our brand as we did.",
     author: "Client",
-    role: "Cod Masters 8",
+    role: "Cod Master 8s",
     initials: "CM",
   },
 ];
@@ -44,7 +44,7 @@ export function Testimonials() {
     <section className="py-24 md:py-36" style={{ background: "#faf8f5", borderTop: "1px solid rgba(15,14,13,0.05)" }}>
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         {/* Header */}
-        <div className="flex items-center justify-between mb-16">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-16 gap-6 sm:gap-4">
           <div>
             <p className="text-xs tracking-[0.2em] uppercase text-muted mb-3">
               Client Voices

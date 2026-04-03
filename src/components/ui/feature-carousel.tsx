@@ -9,11 +9,12 @@ import Image from "next/image";
 const PROJECTS = [
   {
     id: "lien-on-us",
+    slug: "lien-on-us-medical",
     n: "01",
     label: "Lien On Us Medical",
     category: "Healthcare Platform",
     tags: ["Web App", "Analytics", "Dashboard"],
-    image: "/portfolio-lien-on-us.png",
+    image: "/lien-1.png",
     description: "A medical referral platform with real-time provider dashboard and case tracking — engineered for serious volume.",
     href: "https://www.lienonusmedical.com/",
     accent: "#2a6496",
@@ -21,11 +22,12 @@ const PROJECTS = [
   },
   {
     id: "ticket-snipes",
+    slug: "ticket-snipes",
     n: "02",
     label: "Ticket Snipes",
     category: "Automation Platform",
     tags: ["Full Stack", "E-commerce", "Automation"],
-    image: "/portfolio-ticket-snipes.png",
+    image: "/snipes-1.png",
     description: "High-throughput ticket acquisition system built for speed — automated purchasing with real-time monitoring.",
     href: "https://ticketsnipes.lovable.app/",
     accent: "#7b5ea7",
@@ -33,11 +35,12 @@ const PROJECTS = [
   },
   {
     id: "cod-masters",
+    slug: "cod-masters-8",
     n: "03",
-    label: "Cod Masters 8",
+    label: "Cod Master 8s",
     category: "Community Platform",
     tags: ["Discord Bot", "Community", "Full Stack"],
-    image: "/portfolio-cod-masters.png",
+    image: "/cod-1.png",
     description: "Full-stack gaming community platform with a custom Discord bot for automated management and live leaderboards.",
     href: "https://codmaster8s.com/",
     accent: "#1a7a5e",
@@ -91,7 +94,7 @@ export function FeatureCarousel() {
 
         {/* ── LEFT PANEL ── */}
         <div
-          className="w-full lg:w-1/2 flex flex-col justify-between px-8 md:px-14 py-14 border-r"
+          className="w-full lg:w-1/2 flex flex-col justify-between px-8 md:px-14 py-14 border-b lg:border-b-0 lg:border-r"
           style={{ borderColor: "rgba(15,14,13,0.08)" }}
         >
           {/* Heading */}
@@ -193,10 +196,10 @@ export function FeatureCarousel() {
             </div>
           </div>
 
-          {/* Footer link */}
+          {/* Footer link — desktop only (mobile version lives below the image panel) */}
           <Link
             href="/work"
-            className="inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase transition-colors duration-300 self-start mt-8"
+            className="hidden lg:inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase transition-colors duration-300 self-start mt-8"
             style={{ color: "rgba(15,14,13,0.3)" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#e8541a")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(15,14,13,0.3)")}
@@ -206,7 +209,7 @@ export function FeatureCarousel() {
         </div>
 
         {/* ── RIGHT PANEL — stacked image cards ── */}
-        <div className="w-full lg:w-1/2 flex flex-col" style={{ minHeight: 480 }}>
+        <div className="w-full lg:w-1/2 flex flex-col" style={{ minHeight: 360 }}>
 
           {/* Image area — stacked cards */}
           <div className="relative flex-1 overflow-hidden flex items-center justify-center px-10 py-14">
@@ -263,59 +266,13 @@ export function FeatureCarousel() {
                         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                         className="absolute inset-x-0 bottom-0 px-10 pb-10"
                       >
-                        {/* Tags */}
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {project.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="text-[9px] tracking-[0.2em] uppercase px-3 py-1.5 border font-medium"
-                              style={{
-                                borderColor: `${project.accent}55`,
-                                color: `${project.accent}cc`,
-                                background: "rgba(15,14,13,0.55)",
-                              }}
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-
-                        {/* Category + year */}
-                        <div className="flex items-center gap-4 mb-3">
-                          <span
-                            className="text-[9px] tracking-[0.22em] uppercase px-2.5 py-1 font-semibold"
-                            style={{ background: project.accent, color: "#faf8f5" }}
-                          >
-                            {project.category}
-                          </span>
-                          <span className="text-[10px] font-mono" style={{ color: "rgba(255,255,255,0.25)" }}>
-                            {project.year}
-                          </span>
-                        </div>
-
-                        {/* Title */}
-                        <h3
-                          className="font-display font-bold text-white leading-tight mb-3"
-                          style={{ fontSize: "clamp(1.5rem, 2.5vw, 2.2rem)", letterSpacing: "-0.025em" }}
-                        >
-                          {project.label}
-                        </h3>
-
-                        {/* Description */}
-                        <p className="text-sm leading-relaxed mb-5 max-w-md" style={{ color: "rgba(255,255,255,0.45)" }}>
-                          {project.description}
-                        </p>
-
-                        {/* CTA */}
-                        <a
-                          href={project.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <Link
+                          href={`/work/${project.slug}`}
                           className="inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase font-semibold px-6 py-3 transition-opacity duration-300 hover:opacity-80"
                           style={{ background: project.accent, color: "#faf8f5" }}
                         >
-                          View Live <ArrowUpRight size={12} />
-                        </a>
+                          View Case Study <ArrowUpRight size={12} />
+                        </Link>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -347,6 +304,20 @@ export function FeatureCarousel() {
         </div>
 
       </div>
+
+      {/* All Work link — mobile only, sits below image panel */}
+      <div className="lg:hidden px-8 pb-10 pt-2" style={{ background: "#faf8f5" }}>
+        <Link
+          href="/work"
+          className="inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase transition-colors duration-300"
+          style={{ color: "rgba(15,14,13,0.3)" }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#e8541a")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(15,14,13,0.3)")}
+        >
+          All Work <ArrowUpRight size={12} />
+        </Link>
+      </div>
+
     </section>
   );
 }

@@ -119,6 +119,11 @@ const agentPackages = [
 
 const addOns = [
   {
+    name: "Landing Page",
+    desc: "One page with an intake form, social media display, and photo gallery — the absolute minimum to have a real web presence",
+    price: "$200",
+  },
+  {
     name: "SEO & Metadata Optimization",
     desc: "On-page SEO, meta tags, sitemap, and structured data",
     price: "$199+",
@@ -158,7 +163,7 @@ function PackageCard({ pkg, index }: { pkg: typeof webPackages[0]; index: number
       className="flex flex-col border border-border"
       style={{ background: dark ? "#1c1a17" : "#faf8f5" }}
     >
-      <div className="p-8 border-b border-border" style={{ borderColor: dark ? "rgba(255,255,255,0.08)" : undefined }}>
+      <div className="p-6 sm:p-8 border-b border-border" style={{ borderColor: dark ? "rgba(255,255,255,0.08)" : undefined }}>
         <div className="flex items-start justify-between gap-4 mb-6">
           <span className="text-[9px] tracking-[0.2em] uppercase font-mono" style={{ color: dark ? "rgba(250,248,245,0.4)" : "#5e574f" }}>
             {pkg.n}
@@ -195,7 +200,7 @@ function PackageCard({ pkg, index }: { pkg: typeof webPackages[0]; index: number
         </p>
       </div>
 
-      <div className="p-8 flex flex-col flex-grow">
+      <div className="p-6 sm:p-8 flex flex-col flex-grow">
         <ul className="space-y-3 flex-grow">
           {pkg.features.map((f) => (
             <li key={f} className="flex items-start gap-2.5 text-sm leading-relaxed" style={{ color: dark ? "rgba(250,248,245,0.65)" : "#5e574f" }}>
@@ -255,6 +260,7 @@ export function PricingPageContent() {
           </h2>
           <p className="text-muted text-sm mt-2">Custom apps & complex platforms are quoted individually.</p>
         </motion.div>
+
         <div className="grid md:grid-cols-3 gap-px bg-border border border-border">
           {webPackages.map((pkg, i) => (
             <PackageCard key={pkg.n} pkg={pkg} index={i} />
@@ -303,7 +309,7 @@ export function PricingPageContent() {
               className="font-display font-bold text-void leading-tight"
               style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", letterSpacing: "-0.03em" }}
             >
-              Add-Ons
+              Other Options & Add-Ons
             </h2>
           </motion.div>
           <div className="divide-y" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
@@ -366,7 +372,7 @@ export function PricingPageContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-void p-8 md:p-10"
+              className="bg-void p-6 sm:p-8 md:p-10"
             >
               <p className="font-display font-bold text-paper mb-2 text-xl" style={{ letterSpacing: "-0.025em" }}>
                 {item.name}
@@ -443,7 +449,7 @@ export function PricingPageContent() {
                 </span>
                 <h3
                   className="font-display font-bold text-void leading-[0.95] mb-4"
-                  style={{ fontSize: "clamp(2.4rem, 6vw, 5.5rem)", letterSpacing: "-0.04em" }}
+                  style={{ fontSize: "clamp(1.8rem, 6vw, 5.5rem)", letterSpacing: "-0.04em" }}
                 >
                   {step.title}
                 </h3>

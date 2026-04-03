@@ -105,8 +105,8 @@ function TeamMemberCard({ member }: { member: typeof team[0] }) {
 }
 
 const stats = [
-  { value: "3+", label: "Years building" },
-  { value: "13", label: "Happy clients" },
+  { value: "1+", label: "Years building" },
+  { value: "11", label: "Happy clients" },
   { value: "100%", label: "Client retention" },
   { value: "< 24h", label: "Response time" },
 ];
@@ -146,7 +146,7 @@ export function AboutPageContent() {
       <div className="border-y border-border py-6 my-8 overflow-hidden">
         <div
           className="font-display font-bold text-paper/[0.06] whitespace-nowrap flex gap-16"
-          style={{ fontSize: "clamp(4rem, 10vw, 8rem)", letterSpacing: "-0.04em", animation: "marquee 20s linear infinite" }}
+          style={{ fontSize: "clamp(2.5rem, 10vw, 8rem)", letterSpacing: "-0.04em", animation: "marquee var(--about-marquee-dur) linear infinite", width: "max-content" }}
         >
           {["BRAND", "WEB", "DESIGN", "GROWTH", "BRAND", "WEB", "DESIGN", "GROWTH", "BRAND", "WEB", "DESIGN", "GROWTH"].map((w, i) => (
             <span key={i} className="flex-shrink-0">{w} <span className="text-flame">·</span></span>
@@ -287,7 +287,7 @@ export function AboutPageContent() {
 
       {/* ── CLOSING CTA ── */}
       <div className="border-t border-border">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-28 flex flex-col md:flex-row items-start md:items-end justify-between gap-10">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-28 flex flex-col md:flex-row items-start md:items-end justify-between gap-8 md:gap-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

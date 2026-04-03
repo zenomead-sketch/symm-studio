@@ -11,14 +11,14 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 pt-16 pb-6 border-b border-border overflow-hidden">
         <p
           className="font-display font-bold text-paper/[0.04] leading-none select-none whitespace-nowrap"
-          style={{ fontSize: "clamp(4rem, 14vw, 11rem)" }}
+          style={{ fontSize: "clamp(2rem, 14vw, 11rem)" }}
         >
           Symm Studios
         </p>
       </div>
 
       {/* Links */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-10 flex flex-col md:flex-row justify-between gap-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-10 flex flex-col md:flex-row justify-between gap-10 md:gap-6">
         <div className="space-y-3">
           <p className="text-sm text-muted leading-relaxed max-w-xs">
             World-class brand identity, web development, and creative direction. Based in St. Petersburg, FL.
@@ -51,7 +51,7 @@ export function Footer() {
           <div>
             <p className="text-xs tracking-[0.25em] uppercase text-muted/50 mb-4">Services</p>
             <ul className="space-y-2.5 text-sm">
-              {["Brand Identity", "Web Dev", "UI/UX", "App Dev"].map((s) => (
+              {["Brand Identity", "Web Dev", "UI/UX", "App Dev", "Agentic Automation"].map((s) => (
                 <li key={s}>
                   <Link href="/services" className="text-muted hover:text-paper transition-colors">{s}</Link>
                 </li>
@@ -61,9 +61,9 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 border-t border-border flex flex-col md:flex-row justify-between items-center gap-3">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 border-t border-border flex flex-col gap-3 md:flex-row md:justify-between md:items-center">
         <p className="text-xs text-muted/40">&copy; {year} Symm Studios LLC. All rights reserved.</p>
-        <div className="flex items-center gap-5">
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
           <Link href="/privacy" className="text-xs text-muted/40 hover:text-muted transition-colors">Privacy Policy</Link>
           <Link href="/terms" className="text-xs text-muted/40 hover:text-muted transition-colors">Terms of Service</Link>
           <p className="text-xs text-muted/40">Mon–Fri 7am–5pm EST</p>

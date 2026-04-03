@@ -101,18 +101,6 @@ export function Services() {
                 {s.desc}
               </motion.p>
 
-              {/* Arrow */}
-              <motion.div
-                className="relative flex-shrink-0"
-                animate={{
-                  opacity: active === i ? 1 : 0,
-                  rotate: active === i ? 0 : -30,
-                  x: active === i ? 0 : -8,
-                }}
-                transition={{ duration: 0.3 }}
-              >
-                <ArrowUpRight size={22} className="text-flame" />
-              </motion.div>
             </motion.div>
           ))}
         </div>
