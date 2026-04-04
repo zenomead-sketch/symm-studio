@@ -24,7 +24,7 @@ export async function POST(req: Request) {
       from: "Symm Studios <hello@symm.studio>",
       to: "symmwebstudio@gmail.com",
       replyTo: email,
-      subject: `New inquiry from ${name}${service ? ` — ${service}` : ""}`,
+      subject: `New inquiry from ${name}${service ? `: ${service}` : ""}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; color: #1a1a1a;">
           <div style="background: #faf8f5; padding: 24px 32px; margin-bottom: 24px;">

@@ -3,12 +3,12 @@ import { ContactPageContent } from "@/components/ContactPageContent";
 import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Contact — Start Your Project | Symm Studios",
+  title: "Contact: Start Your Project | Symm Studios",
   description:
     "Ready to build something real? Contact Symm Studios in St. Petersburg, FL. We respond within 24 hours. Let's talk brand identity, web development, or your next digital product.",
   alternates: { canonical: "https://www.symm.studio/contact" },
   openGraph: {
-    title: "Contact Symm Studios — Start Your Project",
+    title: "Contact Symm Studios: Start Your Project",
     description:
       "Get in touch with Symm Studios. St. Petersburg, FL. Response within 24 hours. Brand identity, web development, and digital product enquiries welcome.",
     url: "https://www.symm.studio/contact",

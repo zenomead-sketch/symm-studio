@@ -41,7 +41,7 @@ export default async function OgImage({
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
           <div style={{ width: 40, height: 3, background: "#e8541a", display: "flex" }} />
           <span style={{ color: "#e8541a", fontSize: 13, letterSpacing: "0.22em" }}>
-            SYMM STUDIOS — CASE STUDY
+            SYMM STUDIOS: CASE STUDY
           </span>
         </div>
 

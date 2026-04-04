@@ -3,12 +3,12 @@ import { ServicesPageContent } from "@/components/ServicesPageContent";
 import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Services — Brand Identity, Web Development & SEO | Symm Studios",
+  title: "Services: Brand Identity, Web Development & SEO | Symm Studios",
   description:
     "Brand identity, web development, UI/UX design, creative direction, app development, SEO strategy, and agentic automation. Serving Tampa Bay and clients worldwide.",
   alternates: { canonical: "https://www.symm.studio/services" },
   openGraph: {
-    title: "Services — Brand Identity, Web Development & SEO | Symm Studios",
+    title: "Services: Brand Identity, Web Development & SEO | Symm Studios",
     description:
       "Full-service creative studio offering brand identity, web development, UI/UX design, app development, SEO, and automation. St. Petersburg, FL.",
     url: "https://www.symm.studio/services",
@@ -23,7 +23,7 @@ const servicesSchema = {
       "@type": "WebPage",
       "@id": "https://www.symm.studio/services#webpage",
       url: "https://www.symm.studio/services",
-      name: "Services — Symm Studios",
+      name: "Services: Symm Studios",
       isPartOf: { "@id": "https://www.symm.studio/#website" },
       breadcrumb: {
         "@type": "BreadcrumbList",
@@ -53,7 +53,7 @@ const servicesSchema = {
       "@type": "Service",
       name: "UI/UX Design",
       provider: { "@id": "https://www.symm.studio/#organization" },
-      description: "User interface and experience design that converts — wireframes, prototypes, and polished production-ready interfaces.",
+      description: "User interface and experience design that converts: wireframes, prototypes, and polished production-ready interfaces.",
       areaServed: "Worldwide",
       serviceType: "UI/UX Design",
     },

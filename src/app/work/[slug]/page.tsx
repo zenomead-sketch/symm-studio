@@ -18,11 +18,11 @@ export async function generateMetadata(
   const url = `https://www.symm.studio/work/${project.slug}`;
 
   return {
-    title: `${project.title} — Case Study | Symm Studios`,
-    description: `${project.desc} Built by Symm Studios — brand identity and web development studio based in St. Petersburg, FL.`,
+    title: `${project.title}: Case Study | Symm Studios`,
+    description: `${project.desc} Built by Symm Studios, a brand identity and web development studio based in St. Petersburg, FL.`,
     alternates: { canonical: url },
     openGraph: {
-      title: `${project.title} — Case Study | Symm Studios`,
+      title: `${project.title}: Case Study | Symm Studios`,
       description: project.desc,
       url,
       type: "article",
@@ -31,13 +31,13 @@ export async function generateMetadata(
           url: project.img,
           width: 1200,
           height: 630,
-          alt: `${project.title} — Symm Studios case study`,
+          alt: `${project.title}: Symm Studios case study`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${project.title} — Case Study | Symm Studios`,
+      title: `${project.title}: Case Study | Symm Studios`,
       description: project.desc,
       images: [project.img],
     },
@@ -64,7 +64,7 @@ export default async function CaseStudyPage(
         "@type": "WebPage",
         "@id": `${url}#webpage`,
         url,
-        name: `${project.title} — Case Study | Symm Studios`,
+        name: `${project.title}: Case Study | Symm Studios`,
         description: project.desc,
         isPartOf: { "@id": "https://www.symm.studio/#website" },
         breadcrumb: {

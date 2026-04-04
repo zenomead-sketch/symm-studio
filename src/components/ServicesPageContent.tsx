@@ -22,7 +22,7 @@ const services = [
     ],
     timeline: "2–3 weeks",
     why: [
-      "First impressions are permanent — 94% of customers cite visual appearance as the #1 reason they distrust a business.",
+      "First impressions are permanent. 94% of customers cite visual appearance as the #1 reason they distrust a business.",
       "A cohesive brand identity lets you charge more, attract better clients, and compete with companies 10x your size.",
       "Without it, you're invisible. With it, people remember you after one interaction.",
     ],
@@ -31,7 +31,7 @@ const services = [
     n: "02",
     title: "Web Development",
     tag: "Core Product",
-    desc: "Custom Next.js/React websites built for speed, accessibility, and conversion — from landing pages to complex web apps.",
+    desc: "Custom Next.js/React websites built for speed, accessibility, and conversion, from landing pages to complex web apps.",
     deliverables: [
       "Custom Next.js site (no templates, no page builders)",
       "CMS integration (Sanity, Contentful, or headless WP)",
@@ -42,7 +42,7 @@ const services = [
     ],
     timeline: "3–6 weeks",
     why: [
-      "A 1-second delay in load time reduces conversions by 7%. Template sites are slow, generic, and built for everyone — meaning they work for no one.",
+      "A 1-second delay in load time reduces conversions by 7%. Template sites are slow, generic, and built for everyone, meaning they work for no one.",
       "Your website is your best salesperson. It works 24/7, never calls in sick, and can close clients while you sleep.",
       "Custom development means built exactly for your business logic, your customers, and your growth trajectory.",
     ],
@@ -62,7 +62,7 @@ const services = [
     ],
     timeline: "2–4 weeks",
     why: [
-      "Every extra click costs you customers. Poor UX is the #1 silent killer of digital products — users leave before they ever complain.",
+      "Every extra click costs you customers. Poor UX is the #1 silent killer of digital products. Users leave before they ever complain.",
       "Good UX reduces support costs, increases retention, and makes your product feel premium without changing a single feature.",
       "We design based on how people actually behave, not how we wish they did.",
     ],
@@ -83,7 +83,7 @@ const services = [
     timeline: "1–2 weeks",
     why: [
       "Inconsistent branding makes you look amateur. Customers unconsciously assess trustworthiness through visual consistency.",
-      "Creative direction ensures your Instagram, website, pitch deck, and packaging all feel like one company — not four different freelancers.",
+      "Creative direction ensures your Instagram, website, pitch deck, and packaging all feel like one company, not four different freelancers.",
       "It's the difference between a brand people recognize and one they forget.",
     ],
   },
@@ -91,7 +91,7 @@ const services = [
     n: "05",
     title: "Content Creation",
     tag: "Growth",
-    desc: "Engaging content — from short-form social to long-form editorial — that builds authority and drives real business outcomes.",
+    desc: "Engaging content, from short-form social to long-form editorial, that builds authority and drives real business outcomes.",
     deliverables: [
       "Content strategy & audience analysis",
       "Monthly content calendar",
@@ -111,7 +111,7 @@ const services = [
     n: "06",
     title: "Copywriting",
     tag: "Conversion",
-    desc: "Clear, persuasive copy for websites, ads, and marketing materials that drives real action — not just page views.",
+    desc: "Clear, persuasive copy for websites, ads, and marketing materials that drives real action, not just page views.",
     deliverables: [
       "Full website copy (all pages)",
       "Headline variants for A/B testing",
@@ -123,7 +123,7 @@ const services = [
     timeline: "1–2 weeks",
     why: [
       "You can have the best product in the world and lose to a competitor with worse copy. Words sell.",
-      "Most business copy is written by owners who know too much — it confuses customers. Expert copy speaks the customer's language.",
+      "Most business copy is written by owners who know too much. It confuses customers. Expert copy speaks the customer's language.",
       "A single rewritten headline can increase conversions by 40%. Copy is the highest-ROI investment in your marketing stack.",
     ],
   },
@@ -131,7 +131,7 @@ const services = [
     n: "07",
     title: "App Development",
     tag: "Build",
-    desc: "Native and cross-platform mobile applications on modern stacks — delivering great experiences on every device, at every scale.",
+    desc: "Native and cross-platform mobile applications on modern stacks, delivering great experiences on every device, at every scale.",
     deliverables: [
       "iOS & Android app (React Native or native)",
       "Backend API & database architecture",
@@ -142,7 +142,7 @@ const services = [
     ],
     timeline: "8–16 weeks",
     why: [
-      "If your business process requires repetitive manual work, an app pays for itself — often within months.",
+      "If your business process requires repetitive manual work, an app pays for itself, often within months.",
       "Mobile users expect app-quality experiences. A clunky web experience on mobile is a lost customer.",
       "Custom apps give you a competitive moat. Off-the-shelf software gives your competitors the exact same tools.",
     ],
@@ -163,7 +163,7 @@ const services = [
     timeline: "2–4 weeks",
     why: [
       "The average business loses 40% of leads due to slow follow-up. An AI agent responds in seconds, any hour, any day.",
-      "Virtual agents handle the repetitive 80% of customer questions — freeing your team to focus on the 20% that actually requires a human.",
+      "Virtual agents handle the repetitive 80% of customer questions, freeing your team to focus on the 20% that actually requires a human.",
       "This is not a future technology. Businesses using AI agents right now are outpacing competitors who are still on hold music.",
     ],
   },
@@ -183,7 +183,7 @@ const services = [
     timeline: "Ongoing (first results 60–90 days)",
     why: [
       "75% of users never scroll past the first page of Google. If you're not there, you don't exist to most of your market.",
-      "Paid ads stop the moment you stop paying. SEO compounds — content you publish today can drive traffic for years.",
+      "Paid ads stop the moment you stop paying. SEO compounds. Content you publish today can drive traffic for years.",
       "Metadata controls how your business looks when shared on social or in search results. It's your digital first impression before anyone even clicks.",
     ],
   },
@@ -193,7 +193,7 @@ const guarantees = [
   { n: "01", title: "No templates. Ever.", desc: "Every project is built from scratch for your business. You won't find your website on a theme marketplace." },
   { n: "02", title: "Everything in-house.", desc: "No subcontractors, no handoffs, no diluted quality. The team you talk to is the team that builds." },
   { n: "03", title: "Fixed scope. Fixed price.", desc: "We lock deliverables and price before a line of code is written. No surprise invoices at the finish line." },
-  { n: "04", title: "You own it all.", desc: "Full code ownership, no vendor lock-in. Everything we build is yours — clean, documented, and ready to hand off." },
+  { n: "04", title: "You own it all.", desc: "Full code ownership, no vendor lock-in. Everything we build is yours: clean, documented, and ready to hand off." },
 ];
 
 function ServiceRow({ s, i }: { s: typeof services[0]; i: number }) {
@@ -264,7 +264,7 @@ function ServiceRow({ s, i }: { s: typeof services[0]; i: number }) {
                   <ul className="space-y-3">
                     {s.why.map((point, j) => (
                       <li key={j} className="flex gap-3 text-sm text-muted leading-relaxed">
-                        <span className="text-flame mt-[3px] flex-shrink-0">—</span>
+                        <span className="text-flame mt-[3px] flex-shrink-0">›</span>
                         {point}
                       </li>
                     ))}
@@ -317,7 +317,7 @@ export function ServicesPageContent() {
         <div className="relative w-full overflow-hidden aspect-[4/3] sm:aspect-[16/9] md:aspect-[21/8]">
           <Image
             src="/services-hero.png"
-            alt="Symm Studios — full-service creative studio"
+            alt="Symm Studios: full-service creative studio"
             fill
             className="object-cover"
             priority
@@ -345,7 +345,7 @@ export function ServicesPageContent() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-muted text-sm leading-relaxed"
           >
-            Most agencies specialize in one thing and subcontract the rest, adding cost, delay, and diluted quality at every handoff. Symm keeps everything in-house — from the first brand concept to the final deployed product. Expand any service below to see exactly what you get.
+            Most agencies specialize in one thing and subcontract the rest, adding cost, delay, and diluted quality at every handoff. Symm keeps everything in-house, from the first brand concept to the final deployed product. Expand any service below to see exactly what you get.
           </motion.p>
         </div>
       </div>
@@ -419,7 +419,7 @@ export function ServicesPageContent() {
               you need? <span className="text-flame">Ask us.</span>
             </h2>
             <p className="text-muted text-sm mt-4 max-w-sm leading-relaxed">
-              We scope every project from scratch. Tell us where you are and where you want to go — we'll tell you exactly what it takes to get there.
+              We scope every project from scratch. Tell us where you are and where you want to go. We'll tell you exactly what it takes to get there.
             </p>
           </motion.div>
 

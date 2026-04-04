@@ -10,7 +10,7 @@ const values = [
   {
     n: "01",
     title: "We don't do average.",
-    desc: "Average is the most dangerous place to be. It's invisible. Every decision we make — layout, copy, color, code — is deliberate and built to make you unforgettable.",
+    desc: "Average is the most dangerous place to be. It's invisible. Every decision we make: layout, copy, color, code. All of it is deliberate and built to make you unforgettable.",
   },
   {
     n: "02",
@@ -20,12 +20,12 @@ const values = [
   {
     n: "03",
     title: "Speed is a feature.",
-    desc: "Great work doesn't have to take forever. We move fast without cutting corners — because your market isn't waiting, and neither should you.",
+    desc: "Great work doesn't have to take forever. We move fast without cutting corners. Your market isn't waiting, and neither should you.",
   },
   {
     n: "04",
     title: "Design serves business.",
-    desc: "Beautiful work that doesn't convert is decoration. Every pixel we ship is in service of a business outcome — more leads, more trust, more revenue.",
+    desc: "Beautiful work that doesn't convert is decoration. Every pixel we ship is in service of a business outcome: more leads, more trust, more revenue.",
   },
 ];
 
@@ -34,13 +34,13 @@ const team = [
     name: "Jacob Broerman",
     title: "Founder & Lead Developer",
     linkedin: "https://www.linkedin.com/in/jacob-broerman",
-    bio: "Jacob Broerman is the founder and lead developer of Symm Studios. With a sharp focus on performance-first engineering and modern web architecture, Jacob builds the digital infrastructure that powers every Symm project — from complex Next.js applications to custom e-commerce platforms. He translates creative vision into fast, scalable code that actually ships. Jacob founded Symm with a simple belief: that businesses deserve both beautiful design and bulletproof technology, not one or the other.",
+    bio: "Jacob Broerman is the founder and lead developer of Symm Studios. With a sharp focus on performance-first engineering and modern web architecture, Jacob builds the digital infrastructure that powers every Symm project, from complex Next.js applications to custom e-commerce platforms. He translates creative vision into fast, scalable code that actually ships. Jacob founded Symm with a simple belief: that businesses deserve both beautiful design and bulletproof technology, not one or the other.",
   },
   {
     name: "Zen Mead",
-    title: "Co-founder — Design, Marketing & Sales",
+    title: "Co-founder, Design, Marketing & Sales",
     linkedin: "https://www.linkedin.com/in/zen-mead",
-    bio: "Zen Mead is the co-founder of Symm Studios and the creative force behind its brand identity, marketing strategy, and client growth. With a designer's eye and a marketer's mindset, Zen bridges the gap between how a brand looks and how it converts. He leads the visual direction of every Symm project — from logo systems and UI design to content strategy and sales — ensuring every touchpoint is built to make a lasting impression.",
+    bio: "Zen Mead is the co-founder of Symm Studios and the creative force behind its brand identity, marketing strategy, and client growth. With a designer's eye and a marketer's mindset, Zen bridges the gap between how a brand looks and how it converts. He leads the visual direction of every Symm project, from logo systems and UI design to content strategy and sales, ensuring every touchpoint is built to make a lasting impression.",
   },
 ];
 
@@ -255,11 +255,11 @@ export function AboutPageContent() {
           className="font-display font-bold text-paper leading-none"
           style={{ fontSize: "clamp(3.5rem, 8vw, 7rem)", letterSpacing: "-0.04em" }}
         >
-          <ParallaxWord text="Brand Identity —" offset={[-60, 60]} />
-          <ParallaxWord text="Web Development —" offset={[60, -60]} />
-          <ParallaxWord text="UI / UX Design —" offset={[-40, 40]} />
-          <ParallaxWord text="Agentic Automation —" offset={[-60, 60]} />
-          <ParallaxWord text="SEO & Metadata —" offset={[60, -60]} />
+          <ParallaxWord text="Brand Identity" offset={[-60, 60]} />
+          <ParallaxWord text="Web Development" offset={[60, -60]} />
+          <ParallaxWord text="UI / UX Design" offset={[-40, 40]} />
+          <ParallaxWord text="Agentic Automation" offset={[-60, 60]} />
+          <ParallaxWord text="SEO & Metadata" offset={[60, -60]} />
         </div>
       </div>
 

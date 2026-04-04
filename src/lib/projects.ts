@@ -30,7 +30,7 @@ export const projects: ProjectDetail[] = [
     title: "Lien On Us Medical",
     category: "Healthcare Platform",
     tags: ["Web App", "Analytics", "Healthcare"],
-    desc: "A medical referral platform featuring a provider dashboard with real-time analytics and case tracking — built to handle serious volume for Los Angeles healthcare providers.",
+    desc: "A medical referral platform featuring a provider dashboard with real-time analytics and case tracking, built to handle serious volume for Los Angeles healthcare providers.",
     href: "https://www.lienonusmedical.com/",
     live: true,
     year: "2024",
@@ -41,11 +41,11 @@ export const projects: ProjectDetail[] = [
     role: "Lead Developer",
     duration: "6 weeks",
     problem:
-      "Healthcare providers in Los Angeles needed a fast, reliable way to connect with clients and quantify their referral pipeline. Existing systems were slow, siloed, and offered no real visibility into how leads were arriving — making it impossible to optimize outreach or prove ROI to partners.",
+      "Healthcare providers in Los Angeles needed a fast, reliable way to connect with clients and quantify their referral pipeline. Existing systems were slow, siloed, and offered no real visibility into how leads were arriving, making it impossible to optimize outreach or prove ROI to partners.",
     solution:
       "We built a full medical referral platform with integrated mapping APIs for instant provider discovery and a backend analytics dashboard that tracks every meaningful touchpoint: website clicks, phone calls, referrals, and emails. All data is sortable and exportable to CSV so providers can hand off clean reports to partners without extra work.",
     outcome:
-      "Providers in the Los Angeles network can now surface actionable referral data in seconds — replacing manual tracking with a live dashboard that quantifies every channel and simplifies partner reporting.",
+      "Providers in the Los Angeles network can now surface actionable referral data in seconds: replacing manual tracking with a live dashboard that quantifies every channel and simplifies partner reporting.",
     techStack: [
       { label: "Frontend", items: ["React", "TypeScript", "Tailwind CSS"] },
       { label: "Backend", items: ["Supabase", "PostgreSQL", "Edge Functions"] },
@@ -58,7 +58,7 @@ export const projects: ProjectDetail[] = [
       },
       {
         title: "Analytics Dashboard",
-        desc: "A live backend dashboard tracking clicks, phone calls, referrals, and emails — all in one place.",
+        desc: "A live backend dashboard tracking clicks, phone calls, referrals, and emails: all in one place.",
       },
       {
         title: "Multi-Channel Tracking",
@@ -70,10 +70,10 @@ export const projects: ProjectDetail[] = [
       },
     ],
     images: [
-      { src: "/lien-1.png", alt: "Lien On Us Medical — homepage" },
-      { src: "/lien-2.png", alt: "Lien On Us Medical — provider search" },
-      { src: "/lien-3.png", alt: "Lien On Us Medical — analytics dashboard" },
-      { src: "/lien-4.png", alt: "Lien On Us Medical — reporting" },
+      { src: "/lien-1.png", alt: "Lien On Us Medical: homepage" },
+      { src: "/lien-2.png", alt: "Lien On Us Medical: provider search" },
+      { src: "/lien-3.png", alt: "Lien On Us Medical: analytics dashboard" },
+      { src: "/lien-4.png", alt: "Lien On Us Medical: reporting" },
     ],
   },
   {
@@ -95,9 +95,9 @@ export const projects: ProjectDetail[] = [
     problem:
       "Concert discovery and fan-to-fan ticket trading were scattered across a dozen apps with no single social layer connecting fans. Buying presales, tracking upcoming tours, and connecting with other fans required jumping between platforms that didn't talk to each other.",
     solution:
-      "We built an all-in-one platform that pulls live concert data — presales, resell inventory, upcoming tours — from Bandsintown, Ticketmaster, and other real-time APIs. On top of the data layer we built a full social platform: user profiles with custom music, friends, real-time chat, a peer-to-peer marketplace with a trust factor system, and artist tracking with push notifications.",
+      "We built an all-in-one platform that pulls live concert data (presales, resell inventory, upcoming tours) from Bandsintown, Ticketmaster, and other real-time APIs. On top of the data layer we built a full social platform: user profiles with custom music, friends, real-time chat, a peer-to-peer marketplace with a trust factor system, and artist tracking with push notifications.",
     outcome:
-      "A single destination where fans discover concerts, trade tickets, and connect — replacing the fragmented multi-app workflow with one cohesive experience built around real-time data.",
+      "A single destination where fans discover concerts, trade tickets, and connect: replacing the fragmented multi-app workflow with one cohesive experience built around real-time data.",
     techStack: [
       { label: "Frontend", items: ["React", "TypeScript", "Tailwind CSS"] },
       { label: "Backend", items: ["Node.js", "PostgreSQL"] },
@@ -126,10 +126,10 @@ export const projects: ProjectDetail[] = [
       },
     ],
     images: [
-      { src: "/snipes-1.png", alt: "Ticket Snipes — homepage" },
-      { src: "/snipes-2.png", alt: "Ticket Snipes — concert discovery" },
-      { src: "/snipes-3.png", alt: "Ticket Snipes — user profile" },
-      { src: "/snipes-4.png", alt: "Ticket Snipes — marketplace" },
+      { src: "/snipes-1.png", alt: "Ticket Snipes: homepage" },
+      { src: "/snipes-2.png", alt: "Ticket Snipes: concert discovery" },
+      { src: "/snipes-3.png", alt: "Ticket Snipes: user profile" },
+      { src: "/snipes-4.png", alt: "Ticket Snipes: marketplace" },
     ],
   },
   {
@@ -149,11 +149,11 @@ export const projects: ProjectDetail[] = [
     role: "Lead Developer",
     duration: "10 weeks",
     problem:
-      "Organizing amateur Call of Duty money matches and Twitter tournaments was chaotic and entirely manual. No dedicated platform existed for small-scale wagers, bracket management, or in-Discord 8s — hosts were coordinating everything through DMs and spreadsheets, and payments had no trustless mechanism.",
+      "Organizing amateur Call of Duty money matches and Twitter tournaments was chaotic and entirely manual. No dedicated platform existed for small-scale wagers, bracket management, or in-Discord 8s: hosts were coordinating everything through DMs and spreadsheets, and payments had no trustless mechanism.",
     solution:
-      "We built a full-stack platform purpose-built for the COD community and paired it with a custom Discord bot that fully automates the 4v4 process. The platform handles tournament brackets, a wheel spin for random team generation, Money 8s matching, leaderboards, match/side betting, and stream watching. The bot handles captain selection, voting, channel generation, and crypto escrow payments — eliminating the manual overhead entirely.",
+      "We built a full-stack platform purpose-built for the COD community and paired it with a custom Discord bot that fully automates the 4v4 process. The platform handles tournament brackets, a wheel spin for random team generation, Money 8s matching, leaderboards, match/side betting, and stream watching. The bot handles captain selection, voting, channel generation, and crypto escrow payments: eliminating the manual overhead entirely.",
     outcome:
-      "200+ active Discord members. Wheel spin and Money 8s went fully live in March 2026 with multiple tournaments hosted weekly. The platform fills a genuine gap in the amateur competitive COD scene — giving everyday hosts a professional-grade tool for organized, trustless money matches.",
+      "200+ active Discord members. Wheel spin and Money 8s went fully live in March 2026 with multiple tournaments hosted weekly. The platform fills a genuine gap in the amateur competitive COD scene: giving everyday hosts a professional-grade tool for organized, trustless money matches.",
     techStack: [
       { label: "Frontend", items: ["React", "TypeScript", "Tailwind CSS"] },
       { label: "Backend", items: ["Node.js", "PostgreSQL"] },
@@ -166,7 +166,7 @@ export const projects: ProjectDetail[] = [
       },
       {
         title: "Wheel Spin Team Generator",
-        desc: "Random team generation via wheel spin — removes bias and speeds up the pre-match setup process.",
+        desc: "Random team generation via wheel spin: removes bias and speeds up the pre-match setup process.",
       },
       {
         title: "Money 8s",
@@ -174,7 +174,7 @@ export const projects: ProjectDetail[] = [
       },
       {
         title: "Discord Bot Automation",
-        desc: "Fully automates the 4v4 process within Discord — captain selection, player voting, channel generation, and crypto escrow payments.",
+        desc: "Fully automates the 4v4 process within Discord: captain selection, player voting, channel generation, and crypto escrow payments.",
       },
       {
         title: "Leaderboard & Match Betting",
@@ -182,13 +182,13 @@ export const projects: ProjectDetail[] = [
       },
     ],
     images: [
-      { src: "/cod-1.png", alt: "Cod Master 8s — homepage" },
-      { src: "/cod-2.png", alt: "Cod Master 8s — tournaments" },
-      { src: "/cod-3.png", alt: "Cod Master 8s — bracket view" },
-      { src: "/cod-4.png", alt: "Cod Master 8s — leaderboard" },
-      { src: "/cod-5.png", alt: "Cod Master 8s — money 8s" },
-      { src: "/cod-6.png", alt: "Cod Master 8s — wheel spin" },
-      { src: "/cod-7.png", alt: "Cod Master 8s — Discord bot" },
+      { src: "/cod-1.png", alt: "Cod Master 8s: homepage" },
+      { src: "/cod-2.png", alt: "Cod Master 8s: tournaments" },
+      { src: "/cod-3.png", alt: "Cod Master 8s: bracket view" },
+      { src: "/cod-4.png", alt: "Cod Master 8s: leaderboard" },
+      { src: "/cod-5.png", alt: "Cod Master 8s: money 8s" },
+      { src: "/cod-6.png", alt: "Cod Master 8s: wheel spin" },
+      { src: "/cod-7.png", alt: "Cod Master 8s: Discord bot" },
     ],
   },
 ];

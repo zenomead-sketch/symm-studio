@@ -28,7 +28,7 @@ const homeSchema = {
   "@type": "WebPage",
   "@id": "https://www.symm.studio/#webpage",
   url: "https://www.symm.studio",
-  name: "Symm Studios — Brand Identity & Web Development",
+  name: "Symm Studios: Brand Identity & Web Development",
   description:
     "Boutique creative studio building brand identities, high-performance websites, and digital products for ambitious businesses worldwide.",
   isPartOf: { "@id": "https://www.symm.studio/#website" },

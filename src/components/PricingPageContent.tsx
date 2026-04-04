@@ -120,7 +120,7 @@ const agentPackages = [
 const addOns = [
   {
     name: "Landing Page",
-    desc: "One page with an intake form, social media display, and photo gallery — the absolute minimum to have a real web presence",
+    desc: "One page with an intake form, social media display, and photo gallery. The absolute minimum to have a real web presence.",
     price: "$200",
   },
   {
@@ -147,7 +147,7 @@ const addOns = [
 
 const steps = [
   { n: "01", title: "Discovery Call", desc: "Free 20-minute call to understand your goals, timeline, and budget. No commitment required." },
-  { n: "02", title: "Fixed Proposal", desc: "Clear fixed-price proposal or custom quote for complex projects — scope and deliverables locked upfront." },
+  { n: "02", title: "Fixed Proposal", desc: "Clear fixed-price proposal or custom quote for complex projects. Scope and deliverables locked upfront." },
   { n: "03", title: "Build & Revise", desc: "50% deposit to start. We build fast, check in often, and revise until it's right." },
   { n: "04", title: "Launch & Support", desc: "We don't disappear at launch. Every project includes post-delivery support so you're covered." },
 ];
@@ -238,7 +238,7 @@ export function PricingPageContent() {
             <em className="not-italic text-flame">No surprises.</em>
           </h1>
           <p className="text-muted text-base mt-6 max-w-xl leading-relaxed">
-            Fixed-price packages for most projects. Complex work is quoted individually — always transparently.
+            Fixed-price packages for most projects. Complex work is quoted individually, always transparently.
           </p>
         </motion.div>
       </div>
@@ -401,10 +401,10 @@ export function PricingPageContent() {
               className="font-display font-bold text-paper leading-tight mb-2"
               style={{ fontSize: "clamp(1.3rem, 2.5vw, 1.8rem)", letterSpacing: "-0.025em" }}
             >
-              Every project is different — and that&apos;s fine.
+              Every project is different, and that&apos;s fine.
             </h3>
             <p className="text-muted text-sm leading-relaxed max-w-lg">
-              If your project doesn&apos;t fit neatly into a package, or you&apos;re not sure which tier makes sense, reach out. We&apos;ll review your scope and send a custom quote — no commitment required.
+              If your project doesn&apos;t fit neatly into a package, or you&apos;re not sure which tier makes sense, reach out. We&apos;ll review your scope and send a custom quote with no commitment required.
             </p>
           </div>
           <Link

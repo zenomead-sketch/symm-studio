@@ -15,14 +15,14 @@ const testimonials = [
   },
   {
     quote:
-      "They understood our business immediately. Within weeks we had a site that looks better than anything our competitors have — and it actually generates leads.",
+      "They understood our business immediately. Within weeks we had a site that looks better than anything our competitors have. And it actually generates leads.",
     author: "Client",
     role: "Ticket Snipes",
     initials: "TS",
   },
   {
     quote:
-      "The attention to detail is extraordinary. Every micro-interaction, every piece of copy — it felt like they cared as much about our brand as we did.",
+      "The attention to detail is extraordinary. Every micro-interaction, every piece of copy. It felt like they cared as much about our brand as we did.",
     author: "Client",
     role: "Cod Master 8s",
     initials: "CM",

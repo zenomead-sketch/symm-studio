@@ -52,6 +52,9 @@ export const metadata: Metadata = {
   creator: "Symm Studios",
   publisher: "Symm Studios",
   alternates: { canonical: "https://www.symm.studio" },
+  icons: {
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "Symm Studios | Brand Identity & Web Development",
     description:
@@ -60,7 +63,7 @@ export const metadata: Metadata = {
     siteName: "Symm Studios",
     locale: "en_US",
     type: "website",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Symm Studios — Brand Identity & Web Development" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Symm Studios: Brand Identity & Web Development" }],
   },
   twitter: {
     card: "summary_large_image",

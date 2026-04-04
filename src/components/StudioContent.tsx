@@ -47,7 +47,7 @@ export function StudioContent() {
           {/* Right — editorial content */}
           <div className="space-y-8 text-muted leading-relaxed">
             <p className="text-paper text-lg leading-relaxed font-medium">
-              Most agencies sell you a process. We sell you an outcome. There is a difference — and most clients only learn it after wasting money on the wrong partner.
+              Most agencies sell you a process. We sell you an outcome. Most clients only learn the difference after wasting money on the wrong partner.
             </p>
 
             <div>
@@ -55,7 +55,7 @@ export function StudioContent() {
                 Two founders. Full accountability.
               </h3>
               <p>
-                Symm Studios is led by Jacob Broerman and Zen Mead. Jacob is the CEO and lead developer — he combines expertise in business analytics, cybersecurity, and AI to build systems that are scalable from day one. Zen is our CMO, who built and scaled his own service business before co-founding Symm. That hands-on experience shows up in every SEO strategy, conversion funnel, and brand decision we make.
+                Symm Studios is led by Jacob Broerman and Zen Mead. Jacob is the CEO and lead developer. He combines expertise in business analytics, cybersecurity, and AI to build systems that are scalable from day one. Zen is our CMO, who built and scaled his own service business before co-founding Symm. That hands-on experience shows up in every SEO strategy, conversion funnel, and brand decision we make.
               </p>
               <p className="mt-4">
                 When you work with Symm Studios, you work directly with us. No account managers passing notes, no junior designers shipping your final product without oversight. Every deliverable goes through the two people whose names are on the door.
@@ -67,10 +67,10 @@ export function StudioContent() {
                 Built for ambitious businesses, not average ones.
               </h3>
               <p>
-                We are based in St. Petersburg, Florida, and serve clients across the United States and internationally. Our clients range from healthcare platforms in Los Angeles and ticket marketplace startups to competitive gaming communities — businesses that need digital infrastructure built to handle real volume and real users.
+                We are based in St. Petersburg, Florida, and serve clients across the United States and internationally. Our clients range from healthcare platforms in Los Angeles and ticket marketplace startups to competitive gaming communities. All of them need digital infrastructure built to handle real volume and real users.
               </p>
               <p className="mt-4">
-                We have maintained 100% client retention since founding Symm Studios, with an average response time under 24 hours. These are not marketing claims — they are the direct result of treating every engagement like it is our own business on the line.
+                We have maintained 100% client retention since founding Symm Studios, with an average response time under 24 hours. These are not marketing claims. They are the direct result of treating every engagement like it is our own business on the line.
               </p>
             </div>
 
@@ -82,7 +82,7 @@ export function StudioContent() {
                 Symm offers brand identity and logo design, custom web development using Next.js and React, UI/UX design, creative direction, app development, SEO strategy, and agentic AI automation. Most studios offer a slice of this. We cover the full stack because great digital products need design and engineering working from the same brief, by the same team, toward the same goal.
               </p>
               <p className="mt-4">
-                If you are looking for a branding agency in Tampa Bay, a web development studio in St. Petersburg FL, or a partner who understands both design and the business metrics behind it — you have found us.
+                If you are looking for a branding agency in Tampa Bay, a web development studio in St. Petersburg FL, or a partner who understands both design and the business metrics behind it: you have found us.
               </p>
             </div>
 

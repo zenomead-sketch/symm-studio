@@ -100,7 +100,7 @@ export function HeroWith3D() {
 
 
           {/* Headline */}
-          <div
+          <h1
             className="mb-10 font-display font-bold overflow-hidden"
             style={{
               fontSize: "clamp(4rem, 10.5vw, 10rem)",
@@ -108,6 +108,7 @@ export function HeroWith3D() {
               letterSpacing: "-0.04em",
             }}
           >
+            <span className="sr-only">Brand. Web. Design. Growth.</span>
             {loaded && (
               <>
                 <div className="overflow-hidden">
@@ -126,7 +127,7 @@ export function HeroWith3D() {
                 </div>
               </>
             )}
-          </div>
+          </h1>
 
           {/* Sub + CTAs */}
           <div className="flex flex-col sm:flex-row sm:items-end gap-8 sm:gap-16">

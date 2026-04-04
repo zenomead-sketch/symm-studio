@@ -15,7 +15,7 @@ const PROJECTS = [
     category: "Healthcare Platform",
     tags: ["Web App", "Analytics", "Dashboard"],
     image: "/lien-1.png",
-    description: "A medical referral platform with real-time provider dashboard and case tracking — engineered for serious volume.",
+    description: "A medical referral platform with real-time provider dashboard and case tracking, engineered for serious volume.",
     href: "https://www.lienonusmedical.com/",
     accent: "#2a6496",
     year: "2024",
@@ -28,7 +28,7 @@ const PROJECTS = [
     category: "Automation Platform",
     tags: ["Full Stack", "E-commerce", "Automation"],
     image: "/snipes-1.png",
-    description: "High-throughput ticket acquisition system built for speed — automated purchasing with real-time monitoring.",
+    description: "High-throughput ticket acquisition system built for speed, with automated purchasing and real-time monitoring.",
     href: "https://ticketsnipes.lovable.app/",
     accent: "#7b5ea7",
     year: "2024",
@@ -184,6 +184,7 @@ export function FeatureCarousel() {
                           href={`/work/${project.slug}`}
                           onClick={(e) => e.stopPropagation()}
                           className="flex-shrink-0"
+                          aria-label={`View case study: ${project.label}`}
                         >
                           <ArrowUpRight
                             size={14}
@@ -205,6 +206,7 @@ export function FeatureCarousel() {
           {/* Footer link — desktop only (mobile version lives below the image panel) */}
           <Link
             href="/work"
+            aria-label="View all work and case studies"
             className="hidden lg:inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase transition-colors duration-300 self-start mt-8"
             style={{ color: "rgba(15,14,13,0.3)" }}
             onMouseEnter={(e) => (e.currentTarget.style.color = "#e8541a")}
@@ -298,6 +300,7 @@ export function FeatureCarousel() {
       <div className="lg:hidden px-8 pb-10 pt-2" style={{ background: "#faf8f5" }}>
         <Link
           href="/work"
+          aria-label="See all work and case studies"
           className="inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase transition-colors duration-300"
           style={{ color: "rgba(15,14,13,0.3)" }}
           onMouseEnter={(e) => (e.currentTarget.style.color = "#e8541a")}

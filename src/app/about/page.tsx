@@ -3,12 +3,12 @@ import { AboutPageContent } from "@/components/AboutPageContent";
 import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "About — Our Story & Team | Symm Studios",
+  title: "About: Our Story & Team | Symm Studios",
   description:
     "Meet Jacob Broerman and Zen Mead, the two founders behind Symm Studios. A lean, St. Petersburg-born creative studio with 100% client retention and a focus on results.",
   alternates: { canonical: "https://www.symm.studio/about" },
   openGraph: {
-    title: "About Symm Studios — Founders, Story & Mission",
+    title: "About Symm Studios: Founders, Story & Mission",
     description:
       "Two founders. One mission. Jacob Broerman and Zen Mead built Symm Studios to close the gap between great products and weak digital presence.",
     url: "https://www.symm.studio/about",
@@ -23,7 +23,7 @@ const aboutSchema = {
       "@type": "WebPage",
       "@id": "https://www.symm.studio/about#webpage",
       url: "https://www.symm.studio/about",
-      name: "About Symm Studios — Founders & Story",
+      name: "About Symm Studios: Founders & Story",
       isPartOf: { "@id": "https://www.symm.studio/#website" },
       about: { "@id": "https://www.symm.studio/#organization" },
       breadcrumb: {

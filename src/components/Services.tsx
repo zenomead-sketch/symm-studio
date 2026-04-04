@@ -8,7 +8,7 @@ import { ArrowUpRight } from "lucide-react";
 const services = [
   { n: "01", title: "Brand Identity",      desc: "Logos, systems, and visual language that make your business unforgettable." },
   { n: "02", title: "Web Development",     desc: "Custom Next.js/React sites engineered for speed, accessibility, and conversion." },
-  { n: "03", title: "UI/UX Design",        desc: "Interfaces that feel effortless — from wireframe to pixel-perfect delivery." },
+  { n: "03", title: "UI/UX Design",        desc: "Interfaces that feel effortless, from wireframe to pixel-perfect delivery." },
   { n: "04", title: "Creative Direction",  desc: "A clear visual language across every touchpoint, digital and physical." },
   { n: "05", title: "App Development",     desc: "Full-stack web and mobile applications built on modern stacks." },
   { n: "06", title: "SEO & Content",       desc: "Strategy and copy that rank, resonate, and convert." },
