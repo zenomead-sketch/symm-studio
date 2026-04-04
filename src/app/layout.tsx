@@ -29,7 +29,7 @@ const syne = Syne({
 
 export const metadata: Metadata = {
   title: {
-    default: "Symm Studios | Brand Identity & Web Development — St. Petersburg, FL",
+    default: "Symm Studios | Brand Identity & Web Development",
     template: "%s | Symm Studios",
   },
   description:
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   publisher: "Symm Studios",
   alternates: { canonical: "https://www.symm.studio" },
   openGraph: {
-    title: "Symm Studios | Brand Identity & Web Development — St. Petersburg, FL",
+    title: "Symm Studios | Brand Identity & Web Development",
     description:
       "Boutique creative studio building brand identities, websites, and digital products for ambitious businesses. St. Petersburg, FL. Serving clients worldwide.",
     url: "https://www.symm.studio",

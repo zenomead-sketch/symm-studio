@@ -9,12 +9,12 @@ import { Contact } from "@/components/Contact";
 import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Symm Studios | Brand Identity & Web Development — St. Petersburg, FL",
+  title: "Symm Studios | Brand Identity & Web Development",
   description:
     "Symm Studios builds world-class brand identities, high-performance websites, and digital products for ambitious businesses. Based in St. Petersburg, FL. Serving clients worldwide.",
   alternates: { canonical: "https://www.symm.studio" },
   openGraph: {
-    title: "Symm Studios | Brand Identity & Web Development — St. Petersburg, FL",
+    title: "Symm Studios | Brand Identity & Web Development",
     description:
       "Boutique creative studio building brand identities, high-performance websites, and digital products. St. Petersburg, FL. 100% client retention.",
     url: "https://www.symm.studio",
