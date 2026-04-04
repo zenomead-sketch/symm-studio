@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { StickyCTA } from "@/components/StickyCTA";
 import { Cursor } from "@/components/Cursor";
+import { JsonLd } from "@/components/JsonLd";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -27,27 +28,133 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Symm Studios | Brand Identity, Web Development & Creative Direction",
+  title: {
+    default: "Symm Studios | Brand Identity & Web Development — St. Petersburg, FL",
+    template: "%s | Symm Studios",
+  },
   description:
-    "Symm Studios — world-class brand identity, web development, UI/UX design, and creative direction. Based in St. Petersburg, FL. Serving clients globally.",
+    "Symm Studios is a boutique creative studio in St. Petersburg, FL. We build brand identities, high-performance websites, and digital products for ambitious businesses worldwide.",
   metadataBase: new URL("https://www.symm.studio"),
+  keywords: [
+    "brand identity St Petersburg FL",
+    "web development Tampa Bay",
+    "creative studio Florida",
+    "UI UX design agency",
+    "digital products",
+    "branding agency",
+    "web design St Petersburg",
+    "Symm Studios",
+  ],
+  authors: [
+    { name: "Jacob Broerman", url: "https://www.linkedin.com/in/jacob-broerman" },
+    { name: "Zen Mead", url: "https://www.linkedin.com/in/zen-mead" },
+  ],
+  creator: "Symm Studios",
+  publisher: "Symm Studios",
+  alternates: { canonical: "https://www.symm.studio" },
   openGraph: {
-    title: "Symm Studios | Brand Identity, Web Development & Creative Direction",
+    title: "Symm Studios | Brand Identity & Web Development — St. Petersburg, FL",
     description:
-      "World-class digital experiences for brands with global ambition. Brand identity, web development, UI/UX design, and creative direction.",
+      "Boutique creative studio building brand identities, websites, and digital products for ambitious businesses. St. Petersburg, FL. Serving clients worldwide.",
     url: "https://www.symm.studio",
     siteName: "Symm Studios",
     locale: "en_US",
     type: "website",
-    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Symm Studios" }],
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630, alt: "Symm Studios — Brand Identity & Web Development" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Symm Studios | Brand Identity & Web Development",
-    description: "World-class digital experiences for brands with global ambition.",
+    description:
+      "Boutique creative studio building brand identities, websites, and digital products. St. Petersburg, FL.",
     images: ["/opengraph-image.png"],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
+  category: "Creative Agency",
+};
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": "https://www.symm.studio/#organization",
+      name: "Symm Studios",
+      url: "https://www.symm.studio",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.symm.studio/opengraph-image.png",
+        width: 1200,
+        height: 630,
+      },
+      description:
+        "Symm Studios is a boutique creative studio based in St. Petersburg, FL building brand identities, high-performance websites, and digital products for ambitious businesses worldwide.",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "St. Petersburg",
+        addressRegion: "FL",
+        addressCountry: "US",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 27.7731,
+        longitude: -82.6400,
+      },
+      areaServed: [
+        { "@type": "City", name: "St. Petersburg", containedInPlace: { "@type": "State", name: "Florida" } },
+        { "@type": "City", name: "Tampa" },
+        { "@type": "Country", name: "United States" },
+        { "@type": "Place", name: "Worldwide" },
+      ],
+      founder: [
+        {
+          "@type": "Person",
+          "@id": "https://www.symm.studio/#jacob-broerman",
+          name: "Jacob Broerman",
+          jobTitle: "CEO & Lead Developer",
+          url: "https://www.linkedin.com/in/jacob-broerman",
+          sameAs: ["https://www.linkedin.com/in/jacob-broerman"],
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.symm.studio/#zen-mead",
+          name: "Zen Mead",
+          jobTitle: "Co-founder & Chief Marketing Officer",
+          url: "https://www.linkedin.com/in/zen-mead",
+          sameAs: ["https://www.linkedin.com/in/zen-mead"],
+        },
+      ],
+      sameAs: [
+        "https://instagram.com/symmwebstudio",
+        "https://github.com/zenomead-sketch/symm-studio",
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Creative Studio Services",
+        itemListElement: [
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Brand Identity" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web Development" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "UI/UX Design" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Creative Direction" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "SEO & Content Strategy" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "App Development" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Agentic Automation" } },
+        ],
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.symm.studio/#website",
+      url: "https://www.symm.studio",
+      name: "Symm Studios",
+      publisher: { "@id": "https://www.symm.studio/#organization" },
+      inLanguage: "en-US",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -57,6 +164,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <JsonLd data={organizationSchema} />
+      </head>
       <body
         className={`${geist.variable} ${cormorant.variable} ${syne.variable} antialiased text-paper flex flex-col min-h-screen`}
         style={{ background: "#faf8f5" }}
