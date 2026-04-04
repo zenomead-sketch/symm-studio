@@ -138,11 +138,11 @@ export function FeatureCarousel() {
                       transition={{ type: "spring", stiffness: 90, damping: 22, mass: 1 }}
                       className="absolute inset-x-0 flex items-center"
                     >
-                      <button
+                      <div
                         onClick={() => handleChipClick(index)}
                         onMouseEnter={() => setIsPaused(true)}
                         onMouseLeave={() => setIsPaused(false)}
-                        className="w-full flex items-center gap-5 py-5 text-left border-t transition-all duration-500"
+                        className="w-full flex items-center gap-5 py-5 text-left border-t transition-all duration-500 cursor-pointer"
                         style={{ borderColor: isActive ? "rgba(232,84,26,0.35)" : "rgba(15,14,13,0.06)" }}
                       >
                         {/* Flame bar */}
@@ -180,15 +180,21 @@ export function FeatureCarousel() {
                         </div>
 
                         {/* Arrow */}
-                        <ArrowUpRight
-                          size={14}
-                          className="flex-shrink-0 transition-all duration-300"
-                          style={{
-                            color: "#e8541a",
-                            opacity: isActive ? 1 : 0,
-                          }}
-                        />
-                      </button>
+                        <Link
+                          href={`/work/${project.slug}`}
+                          onClick={(e) => e.stopPropagation()}
+                          className="flex-shrink-0"
+                        >
+                          <ArrowUpRight
+                            size={14}
+                            className="transition-all duration-300"
+                            style={{
+                              color: "#e8541a",
+                              opacity: isActive ? 1 : 0,
+                            }}
+                          />
+                        </Link>
+                      </div>
                     </motion.div>
                   );
                 })}
