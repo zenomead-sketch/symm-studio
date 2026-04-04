@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | Symm Studios",
   },
   description:
-    "Symm Studios is a boutique creative studio in St. Petersburg, FL. We build brand identities, high-performance websites, and digital products for ambitious businesses worldwide.",
+    "Boutique creative studio building brand identities, websites, and digital products for ambitious businesses. St. Petersburg, FL.",
   metadataBase: new URL("https://www.symm.studio"),
   keywords: [
     "brand identity St Petersburg FL",
