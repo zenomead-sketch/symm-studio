@@ -163,24 +163,6 @@ export function HeroWith3D() {
             </motion.div>
           </div>
 
-          {/* Client strip */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={loaded ? { opacity: 1 } : {}}
-            transition={{ duration: 1.2, delay: 1.6 }}
-            className="mt-14 pt-5 border-t border-paper/[0.07] flex items-center gap-5 overflow-hidden"
-          >
-            <span className="text-xs tracking-[0.25em] uppercase text-paper/50 flex-shrink-0">
-              Work
-            </span>
-            <div className="flex items-center gap-5 sm:gap-7 min-w-0">
-              {["Lien On Us Medical", "Ticket Snipes", "Cod Master 8s"].map((c, i) => (
-                <span key={c} className={`text-xs text-paper/45 whitespace-nowrap font-medium ${i > 0 ? "hidden sm:inline" : ""}`}>
-                  {c}
-                </span>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </section>
     </>

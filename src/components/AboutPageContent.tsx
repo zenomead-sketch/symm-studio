@@ -142,16 +142,51 @@ export function AboutPageContent() {
         </motion.h1>
       </div>
 
-      {/* ── MARQUEE STATEMENT ── */}
-      <div className="border-y border-border py-6 my-8 overflow-hidden">
-        <div
-          className="font-display font-bold text-paper/[0.06] whitespace-nowrap flex gap-16"
-          style={{ fontSize: "clamp(2.5rem, 10vw, 8rem)", letterSpacing: "-0.04em", animation: "marquee var(--about-marquee-dur) linear infinite", width: "max-content" }}
-        >
-          {["BRAND", "WEB", "DESIGN", "GROWTH", "BRAND", "WEB", "DESIGN", "GROWTH", "BRAND", "WEB", "DESIGN", "GROWTH"].map((w, i) => (
-            <span key={i} className="flex-shrink-0">{w} <span className="text-flame">·</span></span>
+      {/* ── MARQUEE BANNER ── */}
+      <div className="my-8 overflow-hidden" style={{ background: "#faf8f5" }}>
+
+        {/* Top lines: thin dark + flame accent */}
+        <div style={{ marginBottom: "10px" }}>
+          <div style={{ height: "1px", background: "rgba(15,14,13,0.3)", marginBottom: "6px" }} />
+          <div style={{ height: "4px", background: "#e8541a" }} />
+        </div>
+
+        {/* Scrolling text */}
+        <div className="overflow-hidden" style={{ padding: "6px 0" }}>
+          <div
+            className="flex whitespace-nowrap"
+            style={{ animation: "marquee-rtl 22s linear infinite", width: "max-content" }}
+          >
+            {[0, 1].map((copy) => (
+              <div key={copy} className="flex items-center">
+                {[0.18, 1, 0.18, 0.45, 0.18, 1, 0.18, 0.45].map((opacity, i) => (
+                  <span
+                    key={i}
+                    className="font-display inline-block"
+                    style={{
+                      fontFamily: "var(--font-syne)",
+                      fontSize: "clamp(2.2rem, 5.5vw, 4.2rem)",
+                      fontWeight: opacity === 1 ? 700 : 300,
+                      color: opacity === 1 ? "#1c1a17" : `rgba(15,14,13,${opacity})`,
+                      padding: "0 clamp(1rem, 2.5vw, 2.2rem)",
+                      letterSpacing: "0.02em",
+                    }}
+                  >
+                    Symmetry
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom lines: bold fading to nothing */}
+        <div style={{ marginTop: "10px", display: "flex", flexDirection: "column", gap: "5px" }}>
+          {[0.45, 0.25, 0.12, 0.04].map((opacity, i) => (
+            <div key={i} style={{ height: "1px", background: `rgba(15,14,13,${opacity})` }} />
           ))}
         </div>
+
       </div>
 
       {/* ── WHO WE ARE ── */}
@@ -190,16 +225,25 @@ export function AboutPageContent() {
             className="space-y-6 text-muted leading-relaxed"
           >
             <p className="text-paper text-lg leading-relaxed">
-              Symm Studios is a full-service creative studio based in St. Petersburg, FL — building brands, websites, and digital products for ambitious businesses everywhere.
+              Two founders. One mission: build digital experiences that make your business impossible to ignore.
             </p>
             <p>
-              We started because we kept seeing the same problem: companies with great products losing to competitors with better branding and faster websites. We exist to fix that.
+              At Symm Studios, we're a lean, St. Petersburg-born studio led by Jacob Broerman and Zen Mead. We're entrepreneurs and technologists who've seen great companies lose to competitors with sharper branding and faster sites.
             </p>
             <p>
-              We don't do retainer bloat, endless revision cycles, or design-by-committee. We work lean, move fast, and ship work that makes a real difference to your bottom line.
+              Jacob, our CEO and lead developer, combines a background in business and data analytics with cybersecurity and AI. He builds systems that are not just functional, but scalable and impactful. Zen, our chief marketing officer, started by building and scaling his own service business. That experience shows up in everything he does today, from SEO to conversion strategy to full-funnel growth.
             </p>
             <p>
-              Based in Florida. Built for the world.
+              Together, we focus on one thing: results.
+            </p>
+            <p>
+              We started Symm to close the gap between great products and weak digital presence. No bloated teams. No endless revision loops. No design by committee. Just two founders moving fast, making smart decisions, and building work that actually performs.
+            </p>
+            <p>
+              When you work with us, you work directly with us. No layers. No handoffs. Just people who are fully invested in your outcome.
+            </p>
+            <p>
+              St. Petersburg, FL. Serving clients everywhere.
             </p>
           </motion.div>
         </div>

@@ -87,3 +87,9 @@ body {
 :root { --about-marquee-dur: 20s; }
 @media (max-width: 767px) { :root { --about-marquee-dur: 7s; } }
 
+/* ── RTL marquee for 2 copies (about page banner) ── */
+@keyframes marquee-rtl {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+

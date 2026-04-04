@@ -94,7 +94,7 @@ export function FeatureCarousel() {
 
         {/* ── LEFT PANEL ── */}
         <div
-          className="w-full lg:w-1/2 flex flex-col justify-between px-8 md:px-14 py-14 border-b lg:border-b-0 lg:border-r"
+          className="w-full lg:w-1/2 flex flex-col justify-between px-8 md:px-14 pt-14 pb-0 lg:py-14 lg:border-b-0 lg:border-r"
           style={{ borderColor: "rgba(15,14,13,0.08)" }}
         >
           {/* Heading */}
@@ -212,7 +212,7 @@ export function FeatureCarousel() {
         <div className="w-full lg:w-1/2 flex flex-col" style={{ minHeight: 360 }}>
 
           {/* Image area — stacked cards */}
-          <div className="relative flex-1 overflow-hidden flex items-center justify-center px-10 py-14">
+          <div className="relative flex-1 overflow-hidden flex items-center justify-center px-10 pt-1 pb-14 lg:py-14">
 
             {/* Card stack container */}
             <div className="relative w-full max-w-[520px] aspect-[4/3]">
@@ -282,23 +282,6 @@ export function FeatureCarousel() {
 
             </div>{/* end card stack container */}
 
-            {/* Progress dots */}
-            <div className="absolute top-6 right-8 z-30 flex gap-2 items-center">
-              {PROJECTS.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => handleChipClick(i)}
-                  onMouseEnter={() => setIsPaused(true)}
-                  onMouseLeave={() => setIsPaused(false)}
-                  className="transition-all duration-300"
-                  style={{
-                    width: i === currentIndex ? 24 : 8,
-                    height: 2,
-                    background: i === currentIndex ? active.accent : "rgba(255,255,255,0.3)",
-                  }}
-                />
-              ))}
-            </div>
 
           </div>
         </div>

@@ -59,14 +59,14 @@ export function WorkPageContent() {
 function ProjectCard({ p }: { p: ProjectDetail }) {
   return (
     <>
+      <div className="flex flex-wrap gap-1.5 px-4 pt-4 pb-3">
+        {p.tags.map((t) => (
+          <span key={t} className="text-[9px] tracking-widest uppercase px-2 py-1 border" style={{ borderColor: "#e8541a", color: "#e8541a", background: "rgba(232,84,26,0.08)" }}>{t}</span>
+        ))}
+      </div>
       <div className="relative h-52 overflow-hidden">
         <Image src={p.images[0].src} alt={p.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
         <div className="absolute inset-0" style={{ background: `linear-gradient(to bottom, transparent 40%, ${p.accent}30)` }} />
-        <div className="absolute top-4 left-4 flex flex-wrap gap-1.5">
-          {p.tags.map((t) => (
-            <span key={t} className="text-[9px] tracking-widest uppercase px-2 py-1 border backdrop-blur-sm" style={{ borderColor: `${p.accent}60`, color: `${p.accent}ee`, background: "rgba(28,26,23,0.6)" }}>{t}</span>
-          ))}
-        </div>
       </div>
       <div className="p-6 border-t border-border">
         <div className="flex items-start justify-between gap-4 mb-3">
