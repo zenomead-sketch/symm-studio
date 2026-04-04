@@ -6,6 +6,7 @@ import { Portfolio } from "@/components/Portfolio";
 import { Stats } from "@/components/Stats";
 import { Testimonials } from "@/components/Testimonials";
 import { Contact } from "@/components/Contact";
+import { StudioContent } from "@/components/StudioContent";
 import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
@@ -49,6 +50,7 @@ export default function Home() {
       <Services />
       <Portfolio />
       <Stats />
+      <StudioContent />
       <Testimonials />
       <Contact />
     </>
