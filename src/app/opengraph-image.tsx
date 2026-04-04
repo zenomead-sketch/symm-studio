@@ -22,47 +22,70 @@ export default function OgImage() {
       >
         {/* Top accent bar */}
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <div style={{ width: 40, height: 3, background: "#e8541a" }} />
-          <span style={{ color: "#e8541a", fontSize: 13, letterSpacing: "0.22em", textTransform: "uppercase" }}>
-            Symm Studios
+          <div style={{ width: 40, height: 3, background: "#e8541a", display: "flex" }} />
+          <span style={{ color: "#e8541a", fontSize: 13, letterSpacing: "0.22em" }}>
+            SYMM STUDIOS
           </span>
         </div>
 
-        {/* Main text */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-          <div
-            style={{
-              fontSize: 80,
-              fontWeight: 800,
-              color: "#faf8f5",
-              lineHeight: 0.92,
-              letterSpacing: "-0.03em",
-            }}
-          >
-            Build brands that
-            <br />
-            <span style={{ color: "#e8541a" }}>demand</span> attention.
+        {/* Main headline */}
+        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+            <span
+              style={{
+                fontSize: 80,
+                fontWeight: 800,
+                color: "#faf8f5",
+                lineHeight: 1,
+                letterSpacing: "-0.03em",
+              }}
+            >
+              Build brands that
+            </span>
+            <div style={{ display: "flex", gap: 20, alignItems: "baseline" }}>
+              <span
+                style={{
+                  fontSize: 80,
+                  fontWeight: 800,
+                  color: "#e8541a",
+                  lineHeight: 1,
+                  letterSpacing: "-0.03em",
+                }}
+              >
+                demand
+              </span>
+              <span
+                style={{
+                  fontSize: 80,
+                  fontWeight: 800,
+                  color: "#faf8f5",
+                  lineHeight: 1,
+                  letterSpacing: "-0.03em",
+                }}
+              >
+                attention.
+              </span>
+            </div>
           </div>
-          <div
+          <span
             style={{
               fontSize: 22,
               color: "rgba(250,248,245,0.45)",
               fontWeight: 300,
-              letterSpacing: "0.01em",
               marginTop: 8,
             }}
           >
             Brand Identity · Web Development · Digital Products · St. Petersburg, FL
-          </div>
+          </span>
         </div>
 
         {/* Bottom row */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
-          <div style={{ display: "flex", gap: 32 }}>
-            {["11 Clients", "100% Retention", "< 24h Response"].map((stat) => (
-              <div key={stat} style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-                <span style={{ color: "#faf8f5", fontSize: 15, fontWeight: 600 }}>{stat}</span>
-              </div>
+          <div style={{ display: "flex", gap: 40 }}>
+            {["11 Clients", "100% Retention", "Under 24h Response"].map((stat) => (
+              <span key={stat} style={{ color: "#faf8f5", fontSize: 14, fontWeight: 600 }}>
+                {stat}
+              </span>
             ))}
           </div>
           <span style={{ color: "rgba(250,248,245,0.2)", fontSize: 13, letterSpacing: "0.1em" }}>
@@ -78,7 +101,8 @@ export default function OgImage() {
             top: 0,
             width: 4,
             height: "100%",
-            background: "linear-gradient(to bottom, #e8541a, transparent)",
+            background: "#e8541a",
+            display: "flex",
           }}
         />
       </div>

@@ -18,7 +18,7 @@ export default async function OgImage({
 
   const title = project?.title ?? "Case Study";
   const category = project?.category ?? "Project";
-  const desc = project?.desc ?? "";
+  const desc = (project?.desc ?? "").slice(0, 120);
   const accent = project?.accent ?? "#e8541a";
   const tags = project?.tags ?? [];
 
@@ -39,9 +39,9 @@ export default async function OgImage({
       >
         {/* Top label */}
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <div style={{ width: 40, height: 3, background: "#e8541a" }} />
-          <span style={{ color: "#e8541a", fontSize: 13, letterSpacing: "0.22em", textTransform: "uppercase" }}>
-            Symm Studios — Case Study
+          <div style={{ width: 40, height: 3, background: "#e8541a", display: "flex" }} />
+          <span style={{ color: "#e8541a", fontSize: 13, letterSpacing: "0.22em" }}>
+            SYMM STUDIOS — CASE STUDY
           </span>
         </div>
 
@@ -51,35 +51,32 @@ export default async function OgImage({
             style={{
               fontSize: 13,
               letterSpacing: "0.22em",
-              textTransform: "uppercase",
               color: "rgba(250,248,245,0.4)",
             }}
           >
-            {category}
+            {category.toUpperCase()}
           </span>
-          <div
+          <span
             style={{
               fontSize: 76,
               fontWeight: 800,
               color: "#faf8f5",
-              lineHeight: 0.9,
+              lineHeight: 0.95,
               letterSpacing: "-0.03em",
             }}
           >
             {title}
-          </div>
-          <div
+          </span>
+          <span
             style={{
               fontSize: 20,
               color: "rgba(250,248,245,0.4)",
               fontWeight: 300,
               marginTop: 8,
-              maxWidth: 800,
-              lineHeight: 1.5,
             }}
           >
-            {desc.slice(0, 120)}{desc.length > 120 ? "…" : ""}
-          </div>
+            {desc}{(project?.desc ?? "").length > 120 ? "…" : ""}
+          </span>
         </div>
 
         {/* Bottom: tags + domain */}
@@ -89,15 +86,15 @@ export default async function OgImage({
               <div
                 key={tag}
                 style={{
+                  display: "flex",
                   border: `1px solid ${accent}`,
                   color: accent,
                   fontSize: 11,
                   letterSpacing: "0.18em",
-                  textTransform: "uppercase",
                   padding: "6px 14px",
                 }}
               >
-                {tag}
+                {tag.toUpperCase()}
               </div>
             ))}
           </div>
@@ -114,7 +111,8 @@ export default async function OgImage({
             top: 0,
             width: 4,
             height: "100%",
-            background: `linear-gradient(to bottom, ${accent}, transparent)`,
+            background: accent,
+            display: "flex",
           }}
         />
       </div>
