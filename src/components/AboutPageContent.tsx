@@ -1,10 +1,10 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Linkedin, Upload } from "lucide-react";
+import { ArrowRight, Linkedin } from "lucide-react";
 
 const values = [
   {
@@ -34,26 +34,19 @@ const team = [
     name: "Jacob Broerman",
     title: "Founder & Lead Developer",
     linkedin: "https://www.linkedin.com/in/jacob-broerman",
+    photo: "/team-jacob.png",
     bio: "Jacob Broerman is the founder and lead developer of Symm Studios. With a sharp focus on performance-first engineering and modern web architecture, Jacob builds the digital infrastructure that powers every Symm project, from complex Next.js applications to custom e-commerce platforms. He translates creative vision into fast, scalable code that actually ships. Jacob founded Symm with a simple belief: that businesses deserve both beautiful design and bulletproof technology, not one or the other.",
   },
   {
     name: "Zen Mead",
     title: "Co-founder, Design, Marketing & Sales",
     linkedin: "https://www.linkedin.com/in/zen-mead",
+    photo: "/team-zen.png",
     bio: "Zen Mead is the co-founder of Symm Studios and the creative force behind its brand identity, marketing strategy, and client growth. With a designer's eye and a marketer's mindset, Zen bridges the gap between how a brand looks and how it converts. He leads the visual direction of every Symm project, from logo systems and UI design to content strategy and sales, ensuring every touchpoint is built to make a lasting impression.",
   },
 ];
 
 function TeamMemberCard({ member }: { member: typeof team[0] }) {
-  const [preview, setPreview] = useState<string | null>(null);
-
-  function handleFile(e: React.ChangeEvent<HTMLInputElement>) {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const url = URL.createObjectURL(file);
-    setPreview(url);
-  }
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -62,23 +55,10 @@ function TeamMemberCard({ member }: { member: typeof team[0] }) {
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className="flex flex-col gap-8"
     >
-      {/* Photo box */}
-      <label className="group relative block w-full aspect-[4/5] bg-surface border border-border overflow-hidden cursor-pointer">
-        {preview ? (
-          <Image src={preview} alt={member.name} fill className="object-cover" />
-        ) : (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-muted/40 group-hover:text-flame transition-colors">
-            <Upload size={28} strokeWidth={1.5} />
-            <span className="text-xs tracking-[0.18em] uppercase">Upload photo</span>
-          </div>
-        )}
-        <input type="file" accept="image/*" className="sr-only" onChange={handleFile} />
-        {preview && (
-          <div className="absolute inset-0 bg-void/0 group-hover:bg-void/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-            <Upload size={24} strokeWidth={1.5} className="text-paper" />
-          </div>
-        )}
-      </label>
+      {/* Photo */}
+      <div className="relative w-full aspect-[4/5] bg-surface border border-border overflow-hidden">
+        <Image src={member.photo} alt={member.name} fill className="object-cover object-top" />
+      </div>
 
       {/* Info */}
       <div>
