@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="bg-surface border-t border-border">
       {/* Big wordmark */}
-      <div className="max-w-7xl mx-auto px-6 md:px-10 pt-16 pb-6 border-b border-border overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pt-16 pb-6 border-b border-border overflow-hidden flex justify-center md:justify-start">
         <p
           className="font-display font-bold text-paper/[0.04] leading-none select-none whitespace-nowrap"
           style={{ fontSize: "clamp(2rem, 14vw, 11rem)" }}
@@ -24,10 +24,10 @@ export function Footer() {
             World-class brand identity, web development, and creative direction. Based in St. Petersburg, FL.
           </p>
           <a
-            href="mailto:symmwebstudio@gmail.com"
+            href="mailto:contact@symm.studio"
             className="block text-xs tracking-widest uppercase text-paper/50 hover:text-flame transition-colors"
           >
-            symmwebstudio@gmail.com
+            contact@symm.studio
           </a>
           <div className="flex gap-4 pt-1">
             <a href="https://instagram.com/symmwebstudio" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted hover:text-flame transition-colors"><Instagram size={17} /></a>

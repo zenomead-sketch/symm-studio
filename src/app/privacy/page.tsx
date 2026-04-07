@@ -45,12 +45,12 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="font-display font-bold text-paper text-lg mb-3">6. Your Rights</h2>
-            <p>You may request deletion of any personal data you have submitted to us by emailing <a href="mailto:symmwebstudio@gmail.com" className="text-flame hover:underline">symmwebstudio@gmail.com</a>.</p>
+            <p>You may request deletion of any personal data you have submitted to us by emailing <a href="mailto:contact@symm.studio" className="text-flame hover:underline">contact@symm.studio</a>.</p>
           </section>
 
           <section>
             <h2 className="font-display font-bold text-paper text-lg mb-3">7. Contact</h2>
-            <p>For any privacy-related questions, email us at <a href="mailto:symmwebstudio@gmail.com" className="text-flame hover:underline">symmwebstudio@gmail.com</a>.</p>
+            <p>For any privacy-related questions, email us at <a href="mailto:contact@symm.studio" className="text-flame hover:underline">contact@symm.studio</a>.</p>
           </section>
         </div>
 

@@ -22,7 +22,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: "Symm Studios <hello@symm.studio>",
-      to: "symmwebstudio@gmail.com",
+      to: "contact@symm.studio",
       replyTo: email,
       subject: `New inquiry from ${name}${service ? `: ${service}` : ""}`,
       html: `

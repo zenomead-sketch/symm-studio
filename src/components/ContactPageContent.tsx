@@ -66,8 +66,8 @@ export function ContactPageContent() {
               </div>
               <div className="flex gap-4 items-start">
                 <Mail size={15} className="text-muted mt-0.5 flex-shrink-0" />
-                <a href="mailto:symmwebstudio@gmail.com" className="text-paper text-sm font-medium hover:text-flame transition-colors">
-                  symmwebstudio@gmail.com
+                <a href="mailto:contact@symm.studio" className="text-paper text-sm font-medium hover:text-flame transition-colors">
+                  contact@symm.studio
                 </a>
               </div>
               <div className="flex gap-4 items-start">

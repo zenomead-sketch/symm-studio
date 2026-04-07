@@ -39,10 +39,10 @@ export function Contact() {
               <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
-              href="mailto:symmwebstudio@gmail.com"
+              href="mailto:contact@symm.studio"
               className="inline-flex items-center gap-3 px-6 sm:px-8 py-4 border border-void/20 text-void font-display font-semibold text-[11px] sm:text-[13px] tracking-[0.1em] sm:tracking-[0.12em] uppercase hover:border-void hover:bg-void/10 transition-colors min-w-0 overflow-hidden"
             >
-              <span className="truncate">symmwebstudio@gmail.com</span>
+              <span className="truncate">contact@symm.studio</span>
             </a>
           </div>
         </motion.div>

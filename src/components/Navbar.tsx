@@ -131,7 +131,7 @@ export function Navbar() {
                 )
               )}
             </div>
-            <p className="mt-16 text-muted text-sm">symmwebstudio@gmail.com</p>
+            <p className="mt-16 text-muted text-sm">contact@symm.studio</p>
           </motion.div>
         )}
       </AnimatePresence>
