@@ -5,6 +5,7 @@ import { Services } from "@/components/Services";
 import { Portfolio } from "@/components/Portfolio";
 import { Stats } from "@/components/Stats";
 import { Testimonials } from "@/components/Testimonials";
+import { BlogPreview } from "@/components/BlogPreview";
 import { Contact } from "@/components/Contact";
 import { StudioContent } from "@/components/StudioContent";
 import { JsonLd } from "@/components/JsonLd";
@@ -52,6 +53,7 @@ export default function Home() {
       <Stats />
       <StudioContent />
       <Testimonials />
+      <BlogPreview />
       <Contact />
     </>
   );
