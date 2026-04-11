@@ -7,6 +7,7 @@ import { SmoothScroll } from "@/components/SmoothScroll";
 import { StickyCTA } from "@/components/StickyCTA";
 import { Cursor } from "@/components/Cursor";
 import { JsonLd } from "@/components/JsonLd";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -181,6 +182,9 @@ export default function RootLayout({
           <StickyCTA />
         </SmoothScroll>
       </body>
+      {process.env.NEXT_PUBLIC_GA_ID && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+      )}
     </html>
   );
 }
