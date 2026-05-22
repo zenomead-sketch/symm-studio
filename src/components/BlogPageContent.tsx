@@ -7,6 +7,19 @@ import { getAllPosts, BlogPost } from "@/lib/blog";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
+function renderHighlightedTitle(title: string, highlight?: string) {
+  if (!highlight) return title;
+  const idx = title.indexOf(highlight);
+  if (idx === -1) return title;
+  return (
+    <>
+      {title.slice(0, idx)}
+      <em className="not-italic text-flame">{highlight}</em>
+      {title.slice(idx + highlight.length)}
+    </>
+  );
+}
+
 function PostCard({ post, i }: { post: BlogPost; i: number }) {
   return (
     <motion.article
@@ -36,7 +49,7 @@ function PostCard({ post, i }: { post: BlogPost; i: number }) {
             )}
           </div>
           <h2 className="font-display text-2xl md:text-3xl font-bold text-paper group-hover:text-flame transition-colors duration-300 leading-snug mb-3">
-            {post.title}
+            {renderHighlightedTitle(post.title, post.titleHighlight)}
           </h2>
           <p className="text-sm text-muted leading-relaxed max-w-2xl">{post.excerpt}</p>
 
@@ -92,7 +105,8 @@ export function BlogPageContent() {
             className="font-display font-bold text-paper leading-[0.95]"
             style={{ fontSize: "clamp(2.8rem, 8vw, 7rem)" }}
           >
-            Blog
+            Blog, insights,<br />
+            <em className="not-italic text-flame">and journal.</em>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
