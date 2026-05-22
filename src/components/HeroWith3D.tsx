@@ -117,7 +117,7 @@ export function HeroWith3D() {
                 <div className="overflow-hidden">
                   <SplitText text="Web." className="text-paper block" delay={0.28} />
                 </div>
-                <div className="overflow-hidden">
+                <div className="overflow-hidden pb-[0.18em] -mb-[0.18em]">
                   <SplitText text="Design." className="text-flame italic block" delay={0.46} />
                 </div>
                 <div className="overflow-hidden">
